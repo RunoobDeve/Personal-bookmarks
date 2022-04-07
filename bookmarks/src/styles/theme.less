@@ -1,0 +1,17 @@
+@light-color-text: #333;
+@dark-color-text: #fff;
+@light-color-bg: #fff;
+@dark-color-bg: #000;
+
+.themeChange(@style) {
+    @bg-color: "@(style)-color-bg";
+    @text-color: "@(style)-color-text";
+}
+
+.dark-mode {
+    .themeChange(dark)
+}
+
+.light-mode {
+    .themeChange(light)
+}
