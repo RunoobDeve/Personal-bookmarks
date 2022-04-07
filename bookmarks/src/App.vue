@@ -6,6 +6,10 @@
       <router-view />
     </div>
     <toolBar></toolBar>
+    <!-- <div class="sunday">
+      <div class="moon"></div>
+      <div class="sun"></div>
+    </div> -->
   </div>
 </template>
 <script>
@@ -26,4 +30,9 @@ export default {
 };
 </script>
 <style lang="less">
+.main-content {
+  margin-left: 200px;
+  margin-top: 60px;
+  padding: 20px;
+}
 </style>

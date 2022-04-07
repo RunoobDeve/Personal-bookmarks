@@ -1,0 +1,28 @@
+@font-face {
+  font-family: "iconfont"; /* Project id 3308451 */
+  src: 
+       url('data:application/x-font-woff2;charset=utf-8;base64,d09GMgABAAAAAAQsAAsAAAAACQwAAAPdAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAHFQGYACDHAqFLIRfATYCJAMQCwoABCAFhGcHUxvyB8gOJc3AwADgoQNABNValdXdA8egEB/YfXhCRSQ8orOvLEo2Yv9Pp/4AsUrkMCsNo0wnRTFITz6HCMbCBMxTOyJujU/WVLcs+8KVTolaR4iK0PWF+kpAW6EAB8BKLvObkXoq4Lm0E3ThOQLddsTQP0lmFID1QwlWgztDbmdQ5MZDlpGAqWJQBpDQquupxxaIz1CR3ug/AD4l3x//BYQpSKoM7kVO3U6Ww5V3Ie/WDdp17eTvog4B6xMqZGxcmCnuDjuuM8gSGwx0dy02dBBotRKbTmW8W9fpSHRTitb7l0eWBFGDq+gl0v5k5ldIICiUGdBJUK5D9AIUJTqmxRTwFSAWwFXNJiWhW/+knRW0lpYBVs/KEMerBt/pdbwunnOacXwB7S8thnLvC27wFagdr6lDL6ntL7Rlgyxtpz8Zev2649WrosFZPb2OuaEZ8Hi6QmFUDTrnzdKccmc4tDphEIiFxRDG3MYcMh6IS/5cl2POdB0sjOVuvJ0Xl1tA94XIwrAC38L9BYX3fPGBgsAWXlAM2cUuXLG8bJgHXNG7WsddsbW5+nbpS2uotm4m0ic96/jm5jFZildt3WxkYN+nDfAioHwHSe4ol/vcmJu3y7UC/wfhVFgYJTCXNUKWFaYwPW+WE5TbnjfNMTtv8sc0Udg2y/9NmBX2F9qdt4uw1i6mlfTz3abn7KYZ/uXOFrDr2W6zfj54Mxorc0DXZnKQrKsjx31urBnP7vOjYa9675vdSaFU0rOMJCo0abJdvU/td5YKSSJ6f08IlZR9Omovt/foOHxVyRnP22wFu0yH6SGPq0IL7z+/EEolh1YBD9C5lG9mEqBzN581CAfoXMmeKuGP8zuOPklwomyi/rYWhgA/cXlM4u9cKrBM+MULJwv+JsprE1GLFaSULkkg+us5nkO/Ekvo9sz8LzIMe7uFaoRjhLYilCFpzEDWmsMV0hpUeuxBrXUCuq1LPrnHCJ6BKGbAki4BwqBDkPT7Atmg27hCeg2Vce+hNug/dLsQVufrsRSyRAFJMJIT0gaClXFq2lfjZNY8xGiVEqEtWoQEDYsw4S/yq6dTkBoJaxygqWUCMKYJWuBUBCndDCmVHMELXA2SYVE1xnyEry/d9SUiGaeCRAJEAkPkCFINCCwZjhodoePqz8uDMLSUJISJuCKbQMN8mp3gT8RvAi5FoZ7U8kIWa9RiBMAwmjfRBBwVAmnZEKWX4BD47lU1EBlMpHpBjBfBl9DoqQrR8SrV2zsA3dyHldDXM9Az1DOCvkccp5Y2aJGSlagZSyxhG5JLHJBxfIN5HWKlrITD7AEAAAAA') format('woff2'),
+       url('./fonts/iconfont.woff?t=1649322686287') format('woff'),
+       url('./fonts/iconfont.ttf?t=1649322686287') format('truetype');
+}
+
+.iconfont {
+  font-family: "iconfont" !important;
+  font-size: 16px;
+  font-style: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.iconmoonbyueliang:before {
+  content: "\e6a0";
+}
+
+.icontaiyang-copy:before {
+  content: "\e64c";
+}
+
+.iconweibiaoti-:before {
+  content: "\e636";
+}
+

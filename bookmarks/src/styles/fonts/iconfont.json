@@ -1,0 +1,30 @@
+{
+  "id": "3308451",
+  "name": "bookmarks",
+  "font_family": "iconfont",
+  "css_prefix_text": "icon",
+  "description": "个人书签",
+  "glyphs": [
+    {
+      "icon_id": "792344",
+      "name": "moon-b-月亮",
+      "font_class": "moonbyueliang",
+      "unicode": "e6a0",
+      "unicode_decimal": 59040
+    },
+    {
+      "icon_id": "970780",
+      "name": "太阳",
+      "font_class": "taiyang-copy",
+      "unicode": "e64c",
+      "unicode_decimal": 58956
+    },
+    {
+      "icon_id": "2250262",
+      "name": "sun",
+      "font_class": "weibiaoti-",
+      "unicode": "e636",
+      "unicode_decimal": 58934
+    }
+  ]
+}
