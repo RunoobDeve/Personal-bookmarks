@@ -6,10 +6,6 @@
       <router-view />
     </div>
     <toolBar></toolBar>
-    <!-- <div class="sunday">
-      <div class="moon"></div>
-      <div class="sun"></div>
-    </div> -->
   </div>
 </template>
 <script>
@@ -26,6 +22,11 @@ export default {
     Header,
   },
   methods: {},
+  mounted() {
+    document.addEventListener("scroll", () => {
+      console.log(document.documentElement.scrollTop);
+    });
+  },
   created() {},
 };
 </script>

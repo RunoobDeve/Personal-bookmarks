@@ -10,31 +10,18 @@
     </div>
     <div class="siderbar-menu">
       <ul>
-        <li class="menu-item"><a href="">菜单1</a></li>
-        <li class="menu-item"><a href="">菜单1</a></li>
-        <li class="menu-item"><a href="">菜单1</a></li>
-        <li class="menu-item"><a href="">菜单1</a></li>
-        <li class="menu-item"><a href="">菜单1</a></li>
-        <li class="menu-item"><a href="">菜单1</a></li>
-        <li class="menu-item"><a href="">菜单1</a></li>
-        <li class="menu-item"><a href="">菜单1</a></li>
-        <li class="menu-item"><a href="">菜单1</a></li>
-        <li class="menu-item"><a href="">菜单1</a></li>
-        <li class="menu-item"><a href="">菜单1</a></li>
-        <li class="menu-item"><a href="">菜单1</a></li>
-        <li class="menu-item"><a href="">菜单1</a></li>
-        <li class="menu-item"><a href="">菜单1</a></li>
-        <li class="menu-item"><a href="">菜单1</a></li>
-        <li class="menu-item"><a href="">菜单1</a></li>
-        <li class="menu-item"><a href="">菜单1</a></li>
-        <li class="menu-item"><a href="">菜单1</a></li>
-        <li class="menu-item"><a href="">菜单1</a></li>
-        <li class="menu-item"><a href="">菜单1</a></li>
-        <li class="menu-item"><a href="">菜单1</a></li>
-        <li class="menu-item"><a href="">菜单1</a></li>
-        <li class="menu-item"><a href="">菜单1</a></li>
-        <li class="menu-item"><a href="">菜单1</a></li>
-        <li class="menu-item"><a href="">菜单1</a></li>
+        <li @click="changeMenu(1)" class="menu-item">
+          <a href="#mark1">菜单1</a>
+        </li>
+        <li @click="changeMenu(2)" class="menu-item">
+          <a href="#mark2">菜单2</a>
+        </li>
+        <li @click="changeMenu(3)" class="menu-item">
+          <a href="#mark3">菜单3</a>
+        </li>
+        <li @click="changeMenu(4)" class="menu-item">
+          <a href="#mark">菜单4</a>
+        </li>
       </ul>
     </div>
     <div class="siderbar-slogan">slogan</div>
@@ -42,7 +29,26 @@
 </template>
 
 <script>
-export default {};
+export default {
+  data() {
+    return {
+      activeIndex: 1,
+    };
+  },
+  methods: {
+    changeMenu(index) {
+      if (index != this.activeIndex) {
+        // 滚动
+        this.activeIndex = index;
+        var scrollTop = document.getElementById("mark" + index).offsetTop;
+        console.log( document.getElementById("mark" + index))
+        document.body.scrollTop = scrollTop;
+        document.documentElement.scrollTop = (scrollTop - 70);
+      }
+    },
+  },
+  mounted() {},
+};
 </script>
 
 <style lang="less">
@@ -71,6 +77,11 @@ export default {};
     flex: 1;
     .menu-item {
       line-height: 32px;
+      padding: 5px 0;
+      &:hover {
+        background-color: red;
+        color: #fff;
+      }
     }
   }
   .siderbar-slogan {
