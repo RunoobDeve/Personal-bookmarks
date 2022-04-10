@@ -1,7 +1,7 @@
 <template>
   <div>
     <div class="tool-bar">
-      <div class="tool-top">
+      <div class="tool-top" @click="toTop">
         <div class="triangle"></div>
       </div>
       <div
@@ -30,6 +30,17 @@ export default {
         this.theme = "light";
       }
     },
+    toTop(){
+      let scrollTop = document.documentElement.scrollTop
+      let timer = setInterval(()=>{
+        if(scrollTop>0){
+          scrollTop -=20
+           document.documentElement.scrollTop = scrollTop
+        }else{
+          clearInterval(timer)
+        }
+      },10)
+    }
   },
 };
 </script>

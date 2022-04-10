@@ -22,11 +22,6 @@ export default {
     Header,
   },
   methods: {},
-  mounted() {
-    document.addEventListener("scroll", () => {
-      console.log(document.documentElement.scrollTop);
-    });
-  },
   created() {},
 };
 </script>
