@@ -16,7 +16,7 @@
           :key="index"
           :class="['menu-item', activeIndex == index ? 'active' : '']"
         >
-          <a href="#mark1">{{ item.name }}</a>
+          <span>{{ item.name }}</span>
         </li>
       </ul>
     </div>
@@ -36,24 +36,22 @@ export default {
   },
   methods: {
     changeMenu(index) {
-      console.log(index)
       if (index != this.activeIndex) {
         // 滚动
         this.activeIndex = index;
         var scrollTop = document.getElementById("mark" + index).offsetTop;
-        console.log(document.getElementById("mark" + index));
         document.body.scrollTop = scrollTop;
-        document.documentElement.scrollTop = scrollTop - 70;
+        document.documentElement.scrollTop = scrollTop - 60;
       }
     },
     scrool() {
       var classifyArr = document.getElementsByClassName("classify-box");
       for (var i = 0; i < classifyArr.length; i++) {
-        console.log(classifyArr[i].getBoundingClientRect().top)
-        if (classifyArr[i].getBoundingClientRect().top > 100) {
+        console.log(classifyArr[i].getBoundingClientRect().top,i);
+        if (classifyArr[i].getBoundingClientRect().top >= 60) {
           this.activeIndex = i;
           console.log(i);
-          break
+          break;
         }
       }
     },
@@ -80,6 +78,7 @@ export default {
   .siderbar-logo {
     height: 60px;
     background-color: #fff;
+    vertical-align: middle;
     img {
       max-height: 40px;
       vertical-align: middle;
@@ -91,10 +90,13 @@ export default {
     .menu-item {
       line-height: 32px;
       padding: 5px 0;
-      &:hover,
+      color: #555;
+      cursor: pointer;
       &.active {
-        background-color: red;
-        color: #fff;
+        background-color: #f1eeff;
+      }
+      &:hover {
+        background-color: rgba(241, 238, 255, 0.5);
       }
     }
   }
