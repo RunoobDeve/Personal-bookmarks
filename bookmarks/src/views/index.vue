@@ -15,7 +15,13 @@
           src="/static/img/export.svg"
           alt=""
         />
-        <input type="file" accept=".json" ref="jsonInput" id="json" />
+        <input
+          style="display: none"
+          type="file"
+          accept=".json"
+          ref="jsonInput"
+          id="json"
+        />
       </div>
       <a id="mark0" class="classify-title">我的</a>
       <div class="mark-box">
@@ -39,7 +45,7 @@
             <i class="iconfont iconjiahao"></i>
           </div>
         </a>
-        <div class="mark-add">
+        <div class="mark-add" @click="addFlag = true">
           <i class="iconfont iconjiahao"></i>
         </div>
       </div>
@@ -70,6 +76,27 @@
       </div>
     </div>
     <div class="web-desc"></div>
+    <div v-show="addFlag" class="add-site">
+      <div class="site-form">
+        <div class="add-title">添加至我的个人书签</div>
+        <div class="form-item">
+          <div class="site-title">资源名称</div>
+          <input class="site-input" v-model="siteForm.name" type="text" placeholder="资源名称" />
+        </div>
+        <div class="form-item">
+          <div class="site-title">资源地址</div>
+          <input class="site-input" v-model="siteForm.url" type="text" placeholder="资源地址" />
+        </div>
+        <div class="form-item">
+          <div class="site-title">资源描述</div>
+          <textarea class="site-textarea" v-model="siteForm.description" type="text" placeholder="资源描述" />
+        </div>
+        <div class="form-btn">
+          <span @click="addSite">确定</span>
+          <span @click="addFlag = false">取消</span>
+        </div>
+      </div>
+    </div>
   </div>
 </template>
 
@@ -80,6 +107,12 @@ export default {
     return {
       resource: resourceJson,
       myCollect: [],
+      addFlag:false,
+      siteForm:{
+        name:'',
+        url:'',
+        description:''
+      }
     };
   },
   methods: {
@@ -110,6 +143,14 @@ export default {
         this.$refs.jsonInput.click();
       });
     },
+    addSite(){
+      var myCollect = this.myCollect
+      this.myCollect = myCollect.concat(this.siteForm)
+      this.siteForm.name=''
+      this.siteForm.url=''
+      this.siteForm.description=''
+      this.addFlag= false
+    }
   },
   computed: {
     collectIds() {
@@ -125,8 +166,8 @@ export default {
       reader.readAsText(event.target.files[0]);
       reader.onloadend = () => {
         const myCollect = JSON.parse(reader.result);
-        this.myCollect = [...this.myCollect,...myCollect]
-        localStorage.setItem('myCollect',JSON.stringify(this.myCollect))
+        this.myCollect = [...this.myCollect, ...myCollect];
+        localStorage.setItem("myCollect", JSON.stringify(this.myCollect));
       };
     });
   },
@@ -243,5 +284,77 @@ export default {
 }
 .web-desc {
   height: 1000px;
+}
+.add-site {
+  position: fixed;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  background-color: rgba(33, 33, 33, 0.5);
+  z-index: 101;
+  .site-form {
+    position: absolute;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    background-color: #fff;
+    width: 300px;
+    padding: 40px 20px;
+    .add-title {
+      font-size: 18px;
+      color: #000;
+      font-weight: bold;
+    }
+    .form-item {
+      margin-top: 30px;
+      .site-title {
+        font-size: 16px;
+        color: #666;
+        line-height: 24px;
+      }
+      .site-input {
+        width: 100%;
+        border: unset;
+        background-color: #f5f5f5;
+        border-radius: 5px;
+        line-height: 32px;
+        padding: 5px 10px;
+        outline: none;
+        margin-top: 10px;
+      }
+      .site-textarea {
+        width: 100% !important;
+        border: unset;
+        background-color: #f5f5f5;
+        border-radius: 5px;
+        line-height: 32px;
+        padding: 5px 10px;
+        outline: none;
+        margin-top: 10px;
+        height: 120px;
+      }
+    }
+    .form-btn {
+      margin-top: 20px;
+      height: 40px;
+      span {
+        width: 80px;
+        height: 40px;
+        line-height: 40px;
+        text-align: center;
+        display: inline-block;
+        margin-left: 20px;
+        background-color: #999;
+        color: #fff;
+        border-radius: 5px;
+        cursor: pointer;
+        float: right;
+        &:hover{
+          opacity: .9;
+        }
+      }
+    }
+  }
 }
 </style>
