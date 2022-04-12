@@ -4,13 +4,13 @@
       <div class="tool-top" @click="toTop">
         <div class="triangle"></div>
       </div>
-      <div
+      <!-- <div
         @click="toggleTheme"
         :class="['tool-theme', theme == 'light' ? 'light-theme' : 'dark-theme']"
       >
         <i v-show="theme == 'light'" class="iconfont icontaiyang-copy"></i>
         <i v-show="theme == 'dark'" class="iconfont iconmoonbyueliang"></i>
-      </div>
+      </div> -->
     </div>
   </div>
 </template>
@@ -53,7 +53,7 @@ export default {
   bottom: 200px;
   z-index: 10000;
   .tool-top {
-    background-color: #333;
+    background-color: rgba(3, 3, 3, .4);
     width: 40px;
     height: 40px;
     border-radius: 50%;
@@ -66,6 +66,9 @@ export default {
       width: 0;
       margin: 0 auto;
       border-color: transparent transparent #fff transparent;
+    }
+    &:hover{
+      opacity: .6;
     }
   }
   .tool-theme {

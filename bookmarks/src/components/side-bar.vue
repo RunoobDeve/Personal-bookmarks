@@ -11,10 +11,16 @@
     <div class="siderbar-menu">
       <ul>
         <li
-          @click="changeMenu(index)"
+          @click="changeMenu(0)"
+          :class="['menu-item', activeIndex == 0 ? 'active' : '']"
+        >
+          <span>我的</span>
+        </li>
+        <li
+          @click="changeMenu(index + 1)"
           v-for="(item, index) in resource"
           :key="index"
-          :class="['menu-item', activeIndex == index ? 'active' : '']"
+          :class="['menu-item', activeIndex == index + 1 ? 'active' : '']"
         >
           <span>{{ item.name }}</span>
         </li>
@@ -47,7 +53,7 @@ export default {
     scrool() {
       var classifyArr = document.getElementsByClassName("classify-box");
       for (var i = 0; i < classifyArr.length; i++) {
-        console.log(classifyArr[i].getBoundingClientRect().top,i);
+        console.log(classifyArr[i].getBoundingClientRect().top, i);
         if (classifyArr[i].getBoundingClientRect().top >= 60) {
           this.activeIndex = i;
           console.log(i);

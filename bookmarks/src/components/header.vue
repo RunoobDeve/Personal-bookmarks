@@ -40,6 +40,7 @@ export default {
   align-items: center;
   box-shadow: 0 0 2px 0 rgba(41, 48, 66, 0.1);
   background-color: #fff;
+  z-index: 100;
   .toggle-btn {
     display: flex;
     justify-content: space-around;

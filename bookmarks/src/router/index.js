@@ -15,6 +15,12 @@ const routes = [
     name: 'Inspiration',
     component: ()=>import('@/views/inspiration.vue') 
   },
+  {
+    path: '*',
+    name: '404',
+    component: () => import('@/views/404'),
+    meta: { title: '404' },
+  },
 ]
 
 const router = new VueRouter({
