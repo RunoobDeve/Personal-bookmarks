@@ -6,8 +6,8 @@
       <div class="line3"></div>
     </div>
     <div>
-      <span class="avator">头像</span>
-      <span class="search">搜索</span>
+      <!-- <span class="avator">头像</span>
+      <span class="search">搜索</span> -->
     </div>
   </div>
 </template>

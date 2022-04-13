@@ -26,13 +26,13 @@
         </li>
       </ul>
     </div>
-    <div class="siderbar-slogan">slogan</div>
+    <div class="siderbar-slogan">我的个人书签</div>
   </div>
 </template>
 
 <script>
-import resourceJson from "../server/resource.json";
-import { throttle } from "../utils/commonUtil.js";
+import resourceJson from "@/server/resource.json";
+import { throttle } from "@/utils/commonUtil.js";
 export default {
   data() {
     return {
@@ -42,21 +42,19 @@ export default {
   },
   methods: {
     changeMenu(index) {
+      console.log(index,this.activeIndex)
       if (index != this.activeIndex) {
         // 滚动
         this.activeIndex = index;
         var scrollTop = document.getElementById("mark" + index).offsetTop;
-        document.body.scrollTop = scrollTop;
         document.documentElement.scrollTop = scrollTop - 60;
       }
     },
     scrool() {
       var classifyArr = document.getElementsByClassName("classify-box");
       for (var i = 0; i < classifyArr.length; i++) {
-        console.log(classifyArr[i].getBoundingClientRect().top, i);
         if (classifyArr[i].getBoundingClientRect().top >= 60) {
           this.activeIndex = i;
-          console.log(i);
           break;
         }
       }
