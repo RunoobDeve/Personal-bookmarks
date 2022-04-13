@@ -91,40 +91,39 @@
         </div>
       </div>
       <div class="web-desc"></div>
-      <div v-show="addFlag" class="add-site">
-        <div class="site-form">
-          <div class="add-title">添加至我的个人书签</div>
-          <div class="form-item">
-            <div class="site-title">资源名称</div>
-            <input
-              class="site-input"
-              v-model="siteForm.name"
-              type="text"
-              placeholder="请勿重复资源名称且小于20个字符"
-            />
-          </div>
-          <div class="form-item">
-            <div class="site-title">资源地址</div>
-            <input
-              class="site-input"
-              v-model="siteForm.url"
-              type="text"
-              placeholder="合法的 url，以 http/https 开头"
-            />
-          </div>
-          <div class="form-item">
-            <div class="site-title">资源描述</div>
-            <textarea
-              class="site-textarea"
-              v-model="siteForm.description"
-              type="text"
-              placeholder="资源描述"
-            />
-          </div>
-          <div class="form-btn">
-            <span @click="addSite">确定</span>
-            <span @click="addFlag = false">取消</span>
-          </div>
+      <div v-show="addFlag" class="form-mask" @click="addFlag = false"></div>
+      <div :class="['site-form',addFlag?'show-form':'']">
+        <div class="add-title">添加至我的个人书签</div>
+        <div class="form-item">
+          <div class="site-title">资源名称</div>
+          <input
+            class="site-input"
+            v-model="siteForm.name"
+            type="text"
+            placeholder="请勿重复资源名称且小于20个字符"
+          />
+        </div>
+        <div class="form-item">
+          <div class="site-title">资源地址</div>
+          <input
+            class="site-input"
+            v-model="siteForm.url"
+            type="text"
+            placeholder="合法的 url，以 http/https 开头"
+          />
+        </div>
+        <div class="form-item">
+          <div class="site-title">资源描述</div>
+          <textarea
+            class="site-textarea"
+            v-model="siteForm.description"
+            type="text"
+            placeholder="资源描述"
+          />
+        </div>
+        <div class="form-btn">
+          <span @click="addSite">确定</span>
+          <span @click="addFlag = false">取消</span>
         </div>
       </div>
     </div>
@@ -159,13 +158,13 @@ export default {
   },
   methods: {
     addCollect(typeIndex, markIndex, id) {
-      var idIndex = this.collectIds.indexOf(id)
+      var idIndex = this.collectIds.indexOf(id);
       if (idIndex == -1) {
         let site = this.resource[typeIndex].site[markIndex];
         this.myCollect = [...this.myCollect, site];
         localStorage.setItem("myCollect", JSON.stringify(this.myCollect));
-      }else{
-        this.myCollect.splice(idIndex,1)
+      } else {
+        this.myCollect.splice(idIndex, 1);
       }
     },
     delCollect(index) {
@@ -190,14 +189,15 @@ export default {
       });
     },
     addSite() {
-      if(!this.siteForm.name || this.siteForm.name.length>20){
-        alert('网站资源名称不符合规范')
-        return false
+      if (!this.siteForm.name || this.siteForm.name.length > 20) {
+        alert("网站资源名称不符合规范");
+        return false;
       }
-      var urlReg = /https?:\/\/(www\.)?[-a-zA-Z0-9@:%._+~#=]{1,256}\.[a-zA-Z0-9()]{1,6}\b([-a-zA-Z0-9()!@:%_+.~#?&=]*)/
-      if(!urlReg.test(this.siteForm.url)){
-        alert ("不是合法的URL")
-        return false
+      var urlReg =
+        /https?:\/\/(www\.)?[-a-zA-Z0-9@:%._+~#=]{1,256}\.[a-zA-Z0-9()]{1,6}\b([-a-zA-Z0-9()!@:%_+.~#?&=]*)/;
+      if (!urlReg.test(this.siteForm.url)) {
+        alert("不是合法的URL");
+        return false;
       }
       let id = nanoid();
       this.siteForm.id = id;
@@ -209,15 +209,15 @@ export default {
       localStorage.setItem("myCollect", JSON.stringify(this.myCollect));
     },
   },
-  filters:{
-    webDomain(url){
-      let domain = url.split('/')
-      if(domain[2]){
-        return 'https://api.iowen.cn/favicon/'+ domain[2] +'.png'
-      }else{
-        return ''
+  filters: {
+    webDomain(url) {
+      let domain = url.split("/");
+      if (domain[2]) {
+        return "https://api.iowen.cn/favicon/" + domain[2] + ".png";
+      } else {
+        return "";
       }
-    }
+    },
   },
   computed: {
     collectIds() {
@@ -252,7 +252,7 @@ export default {
 
 <style lang="less">
 .classify-box {
-  position: relative;
+  padding-top: 10px;
   .handle {
     position: absolute;
     right: 0;
@@ -353,76 +353,82 @@ export default {
 .web-desc {
   height: 1000px;
 }
-.add-site {
+.form-mask {
   position: fixed;
   right: 0;
   top: 0;
   bottom: 0;
   left: 0;
   background-color: rgba(33, 33, 33, 0.5);
-  z-index: 101;
-  .site-form {
-    position: absolute;
-    right: 0;
-    top: 0;
-    bottom: 0;
-    background-color: #fff;
-    width: 320px;
-    padding: 40px 20px;
-    .add-title {
-      font-size: 18px;
-      color: #000;
-      font-weight: bold;
+  z-index: 1000;
+}
+.site-form {
+  position: fixed;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  background-color: #fff;
+  width: 320px;
+  padding: 40px 20px;
+  transition: all 0.5s;
+  transform: translateX(400px);
+  z-index: 1001;
+  .add-title {
+    font-size: 18px;
+    color: #000;
+    font-weight: bold;
+  }
+  .form-item {
+    margin-top: 30px;
+    .site-title {
+      font-size: 16px;
+      color: #666;
+      line-height: 24px;
     }
-    .form-item {
-      margin-top: 30px;
-      .site-title {
-        font-size: 16px;
-        color: #666;
-        line-height: 24px;
-      }
-      .site-input {
-        width: 100%;
-        border: unset;
-        background-color: #f5f5f5;
-        border-radius: 5px;
-        line-height: 32px;
-        padding: 5px 10px;
-        outline: none;
-        margin-top: 10px;
-      }
-      .site-textarea {
-        width: 100% !important;
-        border: unset;
-        background-color: #f5f5f5;
-        border-radius: 5px;
-        line-height: 32px;
-        padding: 5px 10px;
-        outline: none;
-        margin-top: 10px;
-        height: 120px;
-      }
+    .site-input {
+      width: 100%;
+      border: unset;
+      background-color: #f5f5f5;
+      border-radius: 5px;
+      line-height: 32px;
+      padding: 5px 10px;
+      outline: none;
+      margin-top: 10px;
     }
-    .form-btn {
-      margin-top: 20px;
+    .site-textarea {
+      width: 100% !important;
+      border: unset;
+      background-color: #f5f5f5;
+      border-radius: 5px;
+      line-height: 32px;
+      padding: 5px 10px;
+      outline: none;
+      margin-top: 10px;
+      height: 120px;
+    }
+  }
+  .form-btn {
+    margin-top: 20px;
+    height: 40px;
+    span {
+      width: 80px;
       height: 40px;
-      span {
-        width: 80px;
-        height: 40px;
-        line-height: 40px;
-        text-align: center;
-        display: inline-block;
-        margin-left: 20px;
-        background-color: #999;
-        color: #fff;
-        border-radius: 5px;
-        cursor: pointer;
-        float: right;
-        &:hover {
-          opacity: 0.9;
-        }
+      line-height: 40px;
+      text-align: center;
+      display: inline-block;
+      margin-left: 20px;
+      background-color: #999;
+      color: #fff;
+      border-radius: 5px;
+      cursor: pointer;
+      float: right;
+      &:hover {
+        opacity: 0.9;
       }
     }
+  }
+  &.show-form{
+    transform: translateX(0);
   }
 }
 </style>

@@ -49,7 +49,7 @@ export default {
   position: fixed;
   right: 10px;
   bottom: 200px;
-  z-index: 10000;
+  z-index: 100;
   .tool-top {
     background-color: rgba(160, 139, 255, 0.8);
     width: 40px;

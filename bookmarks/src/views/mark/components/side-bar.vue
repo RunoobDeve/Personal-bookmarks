@@ -42,12 +42,30 @@ export default {
   },
   methods: {
     changeMenu(index) {
-      console.log(index,this.activeIndex)
       if (index != this.activeIndex) {
         // 滚动
         this.activeIndex = index;
-        var scrollTop = document.getElementById("mark" + index).offsetTop;
-        document.documentElement.scrollTop = scrollTop - 60;
+        // var scrollTop = document.getElementById("mark" + index).offsetTop;
+        // document.documentElement.scrollTop = scrollTop - 80;
+        var scrollTop = document.getElementById("mark" + index).offsetTop - 80; //需要滚动的距离
+        var totalTop = document.documentElement.scrollTop; //已经滚动的距离
+        var totalTopRemaind = totalTop % 10;
+        var scrollTopRemaind = scrollTop % 10;
+        scrollTop -= scrollTopRemaind;
+        totalTop -= totalTopRemaind;
+        let timer = setInterval(() => {
+          if (scrollTop > totalTop) {
+            totalTop += 10;
+            document.documentElement.scrollTop = totalTop;
+          } else if (scrollTop < totalTop) {
+            totalTop -= 10;
+            document.documentElement.scrollTop = totalTop;
+          } else {
+            totalTop += scrollTopRemaind;
+            document.documentElement.scrollTop = totalTop;
+            clearInterval(timer);
+          }
+        }, 5);
       }
     },
     scrool() {
