@@ -110,12 +110,20 @@ export default {
     overflow-y: overlay;
     flex: 1;
     .menu-item {
-      line-height: 32px;
-      padding: 5px 0;
+      line-height: 42px;
       color: #555;
       cursor: pointer;
+      position: relative;
+      .iconfont {
+        position: absolute;
+        right: 10px;
+        top: 0;
+      }
       &.active {
         background-color: #f1eeff;
+        .sub-menu {
+          height: auto;
+        }
       }
       &:hover {
         background-color: rgba(241, 238, 255, 0.5);

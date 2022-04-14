@@ -49,7 +49,7 @@
               <i class="iconfont icondel"></i>
             </div>
           </a>
-          <div class="mark-add" @click="addFlag = true">
+          <div class="mark-add" @click="showAddForm">
             <i class="iconfont iconjiahao"></i>
           </div>
         </div>
@@ -91,7 +91,7 @@
         </div>
       </div>
       <div class="web-desc"></div>
-      <div v-show="addFlag" class="form-mask" @click="addFlag = false"></div>
+      <div v-show="addFlag" class="form-mask" @click="hideAddForm"></div>
       <div :class="['site-form', addFlag ? 'show-form' : '']">
         <div class="add-title">添加至我的个人书签</div>
         <div class="form-item">
@@ -123,7 +123,7 @@
         </div>
         <div class="form-btn">
           <span @click="addSite">确定</span>
-          <span @click="addFlag = false">取消</span>
+          <span @click="hideAddForm">取消</span>
         </div>
       </div>
     </div>
@@ -173,7 +173,6 @@ export default {
     },
     exportJson() {
       var data = JSON.stringify(this.myCollect);
-      console.log(data);
       let uri = "data:text/json;charset=utf-8," + encodeURIComponent(data);
       let link = document.createElement("a");
       link.href = uri;
@@ -187,6 +186,14 @@ export default {
       this.$nextTick(() => {
         this.$refs.jsonInput.click();
       });
+    },
+    showAddForm(){
+      this.addFlag  = true
+      document.getElementsByTagName('body')[0].style.overflow='hidden'
+    },
+    hideAddForm(){
+      this.addFlag  = false
+      document.getElementsByTagName('body')[0].style.overflow='overlay'
     },
     addSite() {
       if (!this.siteForm.name || this.siteForm.name.length > 20) {
@@ -262,9 +269,12 @@ export default {
 .classify-box {
   padding-top: 10px;
   .handle {
-    position: absolute;
-    right: 0;
-    top: 4px;
+    float: right;
+    margin-top: 14px;
+    // position: fixed;
+    // right: 20px;
+    // top: 305px;
+    // z-index: 10;
     img {
       margin-left: 10px;
       cursor: pointer;
