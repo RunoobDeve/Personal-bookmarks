@@ -3,7 +3,7 @@
     <siderBar></siderBar>
     <Header></Header>
     <div class="main-content">
-      <div style="height: 100px"></div>
+      <div class="banner-img"></div>
       <div class="classify-box">
         <div class="handle">
           <img
@@ -30,7 +30,7 @@
         <div class="mark-box">
           <a
             :href="item.url"
-            target="_blnak"
+            target="_blank"
             v-for="(item, index) in myCollect"
             :key="index"
             class="mark-item"
@@ -40,7 +40,7 @@
               <img :src="item.url | webDomain" alt="" />
             </div>
             <div>
-              <a :href="item.url" target="_blnak" class="mark-name">{{
+              <a :href="item.url" target="_blank" class="mark-name">{{
                 item.name
               }}</a>
               <div class="mark-desc">{{ item.description }}</div>
@@ -59,7 +59,7 @@
         <div class="mark-box">
           <a
             :href="mark.url"
-            target="_blnak"
+            target="_blank"
             v-for="(mark, markIndex) in item.site"
             :key="markIndex"
             class="mark-item"
@@ -68,7 +68,7 @@
               <img :src="'/static/img/' + mark.image" alt="" />
             </div>
             <div>
-              <a :href="mark.url" target="_blnak" class="mark-name">{{
+              <a :href="mark.url" target="_blank" class="mark-name">{{
                 mark.name
               }}</a>
               <div class="mark-desc">{{ mark.description }}</div>
@@ -92,7 +92,7 @@
       </div>
       <div class="web-desc"></div>
       <div v-show="addFlag" class="form-mask" @click="addFlag = false"></div>
-      <div :class="['site-form',addFlag?'show-form':'']">
+      <div :class="['site-form', addFlag ? 'show-form' : '']">
         <div class="add-title">添加至我的个人书签</div>
         <div class="form-item">
           <div class="site-title">资源名称</div>
@@ -251,6 +251,14 @@ export default {
 </script>
 
 <style lang="less">
+.banner-img{
+  background-image: url('/static/img/sky1.jpg');
+  height: 200px;
+  background-repeat: no-repeat;
+  border-radius: 5px;
+  background-size: cover;
+  background-position: center center;
+}
 .classify-box {
   padding-top: 10px;
   .handle {
@@ -427,7 +435,7 @@ export default {
       }
     }
   }
-  &.show-form{
+  &.show-form {
     transform: translateX(0);
   }
 }
