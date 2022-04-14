@@ -3,7 +3,7 @@
     <div class="siderbar-logo">
       <a href="/">
         <img
-          src="http://jiafangbb.com/wp-content/uploads/2022/03/xinjiafang.png"
+          src="/static/img/logo1.png"
           alt=""
         />
       </a>
@@ -104,6 +104,7 @@ export default {
     img {
       max-height: 40px;
       vertical-align: middle;
+      margin-top: 10px;
     }
   }
   .siderbar-menu {
