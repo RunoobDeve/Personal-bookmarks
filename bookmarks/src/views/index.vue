@@ -10,7 +10,7 @@
       <p class="introduce-desc">
         是一个资源导航网站，精选国内外优质网站，让每个人都能找到自己需要的资源
       </p>
-      <a class="introduce-link" href="/mark"> 点击体验 </a>
+      <router-link class="introduce-link" to="/mark"> 点击体验 </router-link>
     </div>
   </div>
 </template>

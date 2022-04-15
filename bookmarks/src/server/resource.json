@@ -289,47 +289,6 @@
         ]
     },
     {
-        "name": "个人网站",
-        "icon": "./images/menu/personal-website.svg",
-        "site": [
-            {
-                "name": "Itsacat",
-                "description": "葡萄牙插画师，擅长处理图形和色彩，制作有趣动画",
-                "url": "https://itsacatstudio.com",
-                "image": "itsacats.jpg",
-                "id": "fZV8lUAZwg4UIJCEsxzqc"
-            },
-            {
-                "name": "Pengfei Wang",
-                "description": "程序员",
-                "url": "https://pengfeixc.com",
-                "image": "pengfeiw.jpg",
-                "id": "dilbjYhVJ1mrNaq10RzHw"
-            },
-            {
-                "name": "Alice Lee",
-                "description": "独立插画师",
-                "url": "https://www.byalicelee.com",
-                "image": "alice-lee.jpg",
-                "id": "8PuMNAgQeOBHc8a32w8tz"
-            },
-            {
-                "name": "Chloe Takahashi",
-                "description": "日本插画师",
-                "url": "https://chloetakahashi.net",
-                "image": "chloe-takahashi.jpg",
-                "id": "44dMsvHIa2sBfPXDuqcuO"
-            },
-            {
-                "name": "Tang Weijuan",
-                "description": "设计师",
-                "url": "https://tangweijuan.com",
-                "image": "tangweijuan.jpg",
-                "id": "8ZUoq2VgjIlLlsDudGjZQ"
-            }
-        ]
-    },
-    {
         "name": "阅读",
         "icon": "./images/menu/book.svg",
         "site": [

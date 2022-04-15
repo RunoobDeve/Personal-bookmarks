@@ -1,12 +1,12 @@
 <template>
   <div id="siderbar">
     <div class="siderbar-logo">
-      <a href="/">
+      <router-link to="/">
         <img
           src="/static/img/logo1.png"
           alt=""
         />
-      </a>
+      </router-link>
     </div>
     <div class="siderbar-menu">
       <ul>
