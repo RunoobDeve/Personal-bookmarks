@@ -16,7 +16,14 @@
 </template>
 
 <script>
-export default {};
+export default {
+  created() {
+    this.$message({
+      // message: "成功",
+      // type: "success",
+    });
+  },
+};
 </script>
 
 <style lang="less">
@@ -39,7 +46,7 @@ export default {};
     padding: 150px 40px;
     border-radius: 10px;
     .introduce-title {
-      background: linear-gradient(135deg,#f7941e,#72c6ef,#00a651);
+      background: linear-gradient(135deg, #f7941e, #72c6ef, #00a651);
       background-clip: text;
       color: transparent;
       background-size: 15%;
