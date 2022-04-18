@@ -122,8 +122,10 @@
           />
         </div>
         <div class="form-btn">
-          <span @click="addSite">确定</span>
-          <span @click="hideAddForm">取消</span>
+          <div class="btn btn-confirm" @click="addSite">
+            <span class="btn-text">确定</span>
+          </div>
+          <div class="btn btn-cancel" @click="hideAddForm">取消</div>
         </div>
       </div>
     </div>
@@ -187,23 +189,29 @@ export default {
         this.$refs.jsonInput.click();
       });
     },
-    showAddForm(){
-      this.addFlag  = true
-      document.getElementsByTagName('body')[0].style.overflow='hidden'
+    showAddForm() {
+      this.addFlag = true;
+      document.getElementsByTagName("body")[0].style.overflow = "hidden";
     },
-    hideAddForm(){
-      this.addFlag  = false
-      document.getElementsByTagName('body')[0].style.overflow='overlay'
+    hideAddForm() {
+      this.addFlag = false;
+      document.getElementsByTagName("body")[0].style.overflow = "overlay";
     },
     addSite() {
       if (!this.siteForm.name || this.siteForm.name.length > 20) {
-        alert("网站资源名称不符合规范");
+        this.$message({
+          message: "网站资源名称不符合规范",
+          type: "warning",
+        });
         return false;
       }
       var urlReg =
         /https?:\/\/(www\.)?[-a-zA-Z0-9@:%._+~#=]{1,256}\.[a-zA-Z0-9()]{1,6}\b([-a-zA-Z0-9()!@:%_+.~#?&=]*)/;
       if (!urlReg.test(this.siteForm.url)) {
-        alert("不是合法的URL");
+        this.$message({
+          message: "不是合法的URL",
+          type: "warning",
+        });
         return false;
       }
       let id = nanoid();
@@ -258,8 +266,8 @@ export default {
 </script>
 
 <style lang="less">
-.banner-img{
-  background-image: url('/static/img/sky1.jpg');
+.banner-img {
+  background-image: url("/static/img/sky1.jpg");
   height: 200px;
   background-repeat: no-repeat;
   border-radius: 5px;
@@ -412,6 +420,10 @@ export default {
       padding: 5px 10px;
       outline: none;
       margin-top: 10px;
+      border: 1px solid transparent;
+      &:focus {
+        border-color: #2ed573;
+      }
     }
     .site-textarea {
       width: 100% !important;
@@ -423,13 +435,17 @@ export default {
       outline: none;
       margin-top: 10px;
       height: 120px;
+      border: 1px solid transparent;
+      &:focus {
+        border-color: #2ed573;
+      }
     }
   }
   .form-btn {
     margin-top: 20px;
     height: 40px;
-    span {
-      width: 80px;
+    .btn {
+      width: 100px;
       height: 40px;
       line-height: 40px;
       text-align: center;
@@ -440,8 +456,114 @@ export default {
       border-radius: 5px;
       cursor: pointer;
       float: right;
+    }
+    .btn-confirm {
+      background: radial-gradient(
+        circle,
+        rgba(247, 150, 192, 1) 0%,
+        rgba(118, 174, 241, 1) 100%
+      );
+      line-height: 42px;
+      position: relative;
+      &::before,
+      &::after {
+        position: absolute;
+        content: "";
+        height: 0%;
+        width: 1px;
+        box-shadow: -1px -1px 20px 0px rgb(255, 255, 255),
+          -4px -4px 5px 0px rgb(255, 255, 255),
+          7px 7px 20px 0px rgba(0, 0, 0, 40%),
+          4px 4px 5px 0px rgba(0, 0, 0, 30%);
+        transition: all 0.3s;
+        z-index: 10;
+      }
+      &::before {
+        left: 0;
+        top: 0;
+      }
+      &::after {
+        right: 0;
+        bottom: 0;
+      }
+      .btn-text {
+        width: 100%;
+        height: 100%;
+        display: inline-block;
+        position: relative;
+        &::before,
+        &::after {
+          position: absolute;
+          content: "";
+          box-shadow: -1px -1px 20px 0px rgb(255, 255, 255),
+            -4px -4px 5px 0px rgb(255, 255, 255),
+            7px 7px 20px 0px rgba(0, 0, 0, 40%),
+            4px 4px 5px 0px rgba(0, 0, 0, 30%);
+          transition: all 0.3s;
+          height: 1px;
+          width: 0%;
+        }
+        &::before {
+          left: 0;
+          top: 0;
+        }
+        &::after {
+          right: 0;
+          bottom: 0;
+        }
+        &:hover {
+          background: #fff;
+          color: #76aef1;
+          &::before {
+            width: 100%;
+          }
+          &::after {
+            width: 100%;
+          }
+        }
+      }
       &:hover {
-        opacity: 0.9;
+        &::before {
+          height: 100%;
+        }
+        &::after {
+          height: 100%;
+        }
+      }
+    }
+    .btn-cancel {
+      color: #fff;
+      border-radius: 5px;
+      font-family: "Lato", sans-serif;
+      font-weight: 500;
+      background: transparent;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      position: relative;
+      display: inline-block;
+      outline: none;
+      background-color: #89d8d3;
+      background-image: linear-gradient(315deg, #89d8d3 0%, #03c8a8 74%);
+      border: none;
+      z-index: 1;
+      &::after {
+        position: absolute;
+        content: "";
+        width: 100%;
+        height: 0;
+        bottom: 0;
+        left: 0;
+        z-index: -1;
+        border-radius: 5px;
+        background-color: #4dccc6;
+        background-image: linear-gradient(315deg, #4dccc6 0%, #96e4df 74%);
+        box-shadow: -7px -7px 20px 0px #fff9, -4px -4px 5px 0px #fff9,
+          7px 7px 20px 0px #0002, 4px 4px 5px 0px #0001;
+        transition: all 0.3s ease;
+      }
+      &:hover::after {
+        top: 0;
+        height: 100%;
       }
     }
   }

@@ -1,7 +1,23 @@
 <template>
   <transition name="message-fade" @after-leave="handleAfterLeave">
-    <div class="bk-message" v-show="visible">
-      {{ message }}
+    <div
+      :class="[
+        'bk-message',
+        {
+          success: type === 'success',
+          error: type === 'error',
+          info: type === 'info',
+          warning: type === 'warning',
+        },
+      ]"
+      :style="{ top: styleTop + 'px' }"
+      v-show="visible"
+    >
+      <i v-if="type === 'success'" class="iconfont iconzhengque"></i>
+      <i v-if="type === 'warning'" class="iconfont iconjinggao"></i>
+      <i v-if="type === 'error'" class="iconfont iconcuowu"></i>
+      <i v-if="type === 'info'" class="iconfont iconinfo"></i>
+      <span> {{ message }}</span>
     </div>
   </transition>
 </template>
@@ -10,10 +26,11 @@
 export default {
   data() {
     return {
-      message: "信息",
+      message: "信息信息信息信息信息信息信息信息信",
       type: "success",
       duration: 3000,
       visible: false,
+      styleTop: 20,
     };
   },
   props: {},
@@ -35,17 +52,33 @@ export default {
 <style lang="less">
 .bk-message {
   position: fixed;
-  width: 280px;
-  height: 24px;
+  min-width: 280px;
   left: 50%;
   transform: translateX(-50%);
   top: 80px;
-  background-color: red;
-  border-radius: 5px;
-  color: #fff;
-  line-height: 48px;
-  height: 48px;
+  border-radius: 4px;
+  line-height: 18px;
+  padding: 15px;
   text-align: center;
+  z-index: 10000;
+  font-size: 14px;
+  border: 1px solid #ebeef5;
+  &.success {
+    background-color: #f0f9eb;
+    color: #67c23a;
+  }
+  &.error {
+    background-color: #fef0f0;
+    color: #f56c6c;
+  }
+  &.info {
+    background-color: #f0f9eb;
+    color: #909399;
+  }
+  &.warning {
+    background-color: #fdf6ec;
+    color: #e6a23c;
+  }
 }
 .message-fade-enter-active {
   -webkit-animation: message-fade-in.3s;

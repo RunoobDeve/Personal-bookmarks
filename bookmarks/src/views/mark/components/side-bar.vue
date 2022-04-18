@@ -26,7 +26,7 @@
         </li>
       </ul>
     </div>
-    <div class="siderbar-slogan">我的个人书签</div>
+    <div class="siderbar-slogan">你的个人书签</div>
   </div>
 </template>
 

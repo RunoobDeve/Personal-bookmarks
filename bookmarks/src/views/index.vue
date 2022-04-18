@@ -18,10 +18,6 @@
 <script>
 export default {
   created() {
-    this.$message({
-      // message: "成功",
-      // type: "success",
-    });
   },
 };
 </script>
