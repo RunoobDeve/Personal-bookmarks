@@ -313,7 +313,7 @@ export default {
   transition: all 0.3s;
 }
 .banner-img {
-  background-image: url("/static/img/sky1.jpg");
+  background-image: url("/static/img/sky.jpg");
   height: 200px;
   background-repeat: no-repeat;
   border-radius: 5px;
