@@ -3,13 +3,9 @@ import Vuex from 'vuex'
 
 Vue.use(Vuex)
 
+import menu from './modules/menu.js'
 export default new Vuex.Store({
-  state: {
-  },
-  mutations: {
-  },
-  actions: {
-  },
-  modules: {
+  modules:{
+    menu
   }
 })

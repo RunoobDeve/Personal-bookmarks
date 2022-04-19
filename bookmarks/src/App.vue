@@ -16,9 +16,5 @@ export default {
 };
 </script>
 <style lang="less">
-.main-content {
-  margin-left: 200px;
-  margin-top: 60px;
-  padding: 20px;
-}
+
 </style>

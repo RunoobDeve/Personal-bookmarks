@@ -1,6 +1,9 @@
 <template>
-  <div id="header">
-    <div :class="['toggle-btn', isToggle ? 'active' : '']" @click="toggle">
+  <div
+    id="header"
+    :style="{ left: device == 'mobile' ? 0 : sidebar.width + 'px' }"
+  >
+    <div :class="['toggle-btn', isCollapse ? 'active' : '']" @click="toggle">
       <div class="line1"></div>
       <div class="line2"></div>
       <div class="line3"></div>
@@ -13,15 +16,19 @@
 </template>
 
 <script>
+import { mapGetters } from "vuex";
 export default {
   data() {
     return {
       isToggle: false,
     };
   },
+  computed: {
+    ...mapGetters(["sidebar", "isCollapse", "device"]),
+  },
   methods: {
     toggle() {
-      this.isToggle = !this.isToggle;
+      this.$store.dispatch("handleLeftMenu");
     },
   },
 };
@@ -30,7 +37,6 @@ export default {
 <style lang="less">
 #header {
   position: fixed;
-  left: 200px;
   top: 0;
   right: 0;
   height: 60px;
@@ -41,6 +47,7 @@ export default {
   box-shadow: 0 0 2px 0 rgba(41, 48, 66, 0.1);
   background-color: #fff;
   z-index: 100;
+  transition: all 0.3s;
   .toggle-btn {
     display: flex;
     justify-content: space-around;

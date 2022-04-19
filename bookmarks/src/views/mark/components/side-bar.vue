@@ -1,19 +1,16 @@
 <template>
-  <div id="siderbar">
-    <div class="siderbar-logo">
-      <router-link to="/">
-        <img
-          src="/static/img/logo1.png"
-          alt=""
-        />
-      </router-link>
-    </div>
-    <div class="siderbar-menu">
+  <div id="siderbar" :style="{ width: sidebar.width + 'px' ,left:( device=='mobile' && isCollapse) ? '-200px' : '0'}">
+    <router-link class="siderbar-logo" to="/">
+      <img v-if="!isCollapse" src="/static/img/logo.png" alt="" />
+      <img v-else src="/static/img/favicon.png" alt="" />
+    </router-link>
+    <div :class="['siderbar-menu', isCollapse ? 'isCollapse' : '']">
       <ul>
         <li
           @click="changeMenu(0)"
           :class="['menu-item', activeIndex == 0 ? 'active' : '']"
         >
+          <i class="iconfont iconwode"></i>
           <span>我的</span>
         </li>
         <li
@@ -22,17 +19,19 @@
           :key="index"
           :class="['menu-item', activeIndex == index + 1 ? 'active' : '']"
         >
+          <i :class="['iconfont',item.icon]"></i>
           <span>{{ item.name }}</span>
         </li>
       </ul>
     </div>
-    <div class="siderbar-slogan">你的个人书签</div>
+    <div v-if="!isCollapse" class="siderbar-slogan">你的个人书签</div>
   </div>
 </template>
 
 <script>
 import resourceJson from "@/server/resource.json";
 import { throttle } from "@/utils/commonUtil.js";
+import { mapState } from "vuex";
 export default {
   data() {
     return {
@@ -78,6 +77,13 @@ export default {
       }
     },
   },
+  computed: {
+    ...mapState({
+      isCollapse: (state) => state.menu.isCollapse,
+      sidebar: (state) => state.menu.sidebar,
+      device: (state) => state.menu.device,
+    }),
+  },
   mounted() {
     document.addEventListener("scroll", throttle(this.scrool, 10));
   },
@@ -90,13 +96,14 @@ export default {
   top: 0;
   left: 0;
   bottom: 0;
-  width: 200px;
   box-shadow: 0 0 4px 0 rgba(41, 48, 66, 0.1);
   background-color: #f9f9f9;
   display: flex;
   justify-content: space-between;
   flex-direction: column;
   text-align: center;
+  transition: all 0.3s;
+  z-index: 102;
   .siderbar-logo {
     height: 60px;
     background-color: #fff;
@@ -108,17 +115,16 @@ export default {
     }
   }
   .siderbar-menu {
-    overflow-y: overlay;
+    // overflow-y: overlay;
     flex: 1;
     .menu-item {
       line-height: 42px;
       color: #555;
       cursor: pointer;
       position: relative;
-      .iconfont {
-        position: absolute;
-        right: 10px;
-        top: 0;
+      .iconfont{
+        color: #555;
+        margin-right: 5px;
       }
       &.active {
         background-color: #f1eeff;
@@ -128,6 +134,37 @@ export default {
       }
       &:hover {
         background-color: rgba(241, 238, 255, 0.5);
+      }
+    }
+    &.isCollapse {
+      .menu-item {
+        .iconfont{
+          margin-right: 0;
+        }
+        span {
+          display: none;
+          position: absolute;
+          top: 0;
+          right: -125px;
+          width: 120px;
+          background-color: rgb(241, 238, 255);
+          z-index: 100;
+          border-radius: 4px;
+          &::before {
+            position: absolute;
+            left: -10px;
+            margin-top: -5px;
+            top: 50%;
+            content: "";
+            border: 5px solid rgb(241, 238, 255);
+            border-color: transparent rgb(241, 238, 255) transparent transparent;
+          }
+        }
+        &:hover {
+          span {
+            display: block;
+          }
+        }
       }
     }
   }

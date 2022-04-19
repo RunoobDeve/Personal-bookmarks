@@ -1,8 +1,16 @@
 <template>
   <div>
+    <div
+      v-if="device === 'mobile' && sidebar.opened"
+      class="drawer-bg"
+      @click="closeLeftMenu"
+    />
     <siderBar></siderBar>
     <Header></Header>
-    <div class="main-content">
+    <div
+      class="main-content"
+      :style="{ marginLeft: device == 'mobile' ? 0 : sidebar.width + 'px' }"
+    >
       <div class="banner-img"></div>
       <div class="classify-box">
         <div class="handle">
@@ -140,7 +148,9 @@ import resourceJson from "@/server/resource.json";
 import toolBar from "./components/tool-bar.vue";
 import siderBar from "./components/side-bar.vue";
 import Header from "./components/header.vue";
+import resize from "@/mixin/resize";
 import { nanoid } from "nanoid";
+import { mapGetters } from "vuex";
 export default {
   data() {
     return {
@@ -160,7 +170,11 @@ export default {
     siderBar,
     Header,
   },
+  mixins: [resize],
   methods: {
+    closeLeftMenu() {
+      this.$store.dispatch("handleLeftMenu");
+    },
     addCollect(typeIndex, markIndex, id) {
       var idIndex = this.collectIds.indexOf(id);
       if (idIndex == -1) {
@@ -253,6 +267,7 @@ export default {
         return item.id;
       });
     },
+    ...mapGetters(["sidebar", "isCollapse", "device"]),
   },
   mounted() {
     let inputDom = document.getElementById("json");
@@ -283,6 +298,20 @@ export default {
 </script>
 
 <style lang="less">
+.drawer-bg {
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  top: 0;
+  background-color: rgba(0, 0, 0, 40%);
+  z-index: 101;
+}
+.main-content {
+  margin-top: 60px;
+  padding: 20px;
+  transition: all 0.3s;
+}
 .banner-img {
   background-image: url("/static/img/sky1.jpg");
   height: 200px;
@@ -601,6 +630,11 @@ export default {
 @media screen and (max-width: 1280px) {
   .classify-box .mark-box .mark-item {
     width: 33%;
+  }
+}
+@media screen and (max-width: 780px) {
+  .classify-box .mark-box .mark-item {
+    width: 100%;
   }
 }
 </style>
