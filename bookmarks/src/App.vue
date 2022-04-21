@@ -1,5 +1,5 @@
 <template>
-  <div id="app" :class="[theme == 'light' ? 'light-mode' : 'dark-mode']">
+  <div id="app" :data-theme="theme" :class="[theme == 'light' ? 'light-mode' : 'dark-mode']">
     <router-view />
   </div>
 </template>

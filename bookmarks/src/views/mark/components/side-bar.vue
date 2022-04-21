@@ -97,7 +97,7 @@ export default {
   left: 0;
   bottom: 0;
   box-shadow: 0 0 4px 0 rgba(41, 48, 66, 0.1);
-  background-color: #f9f9f9;
+  background-color: var( --theme-siderbar-bg);
   display: flex;
   justify-content: space-between;
   flex-direction: column;
@@ -106,7 +106,7 @@ export default {
   z-index: 102;
   .siderbar-logo {
     height: 60px;
-    background-color: #fff;
+    background-color: var(--theme-header-bg);
     vertical-align: middle;
     img {
       max-height: 40px;
@@ -119,21 +119,21 @@ export default {
     flex: 1;
     .menu-item {
       line-height: 42px;
-      color: #555;
+      color: var(--theme-menu-color);
       cursor: pointer;
       position: relative;
       .iconfont{
-        color: #555;
+        color: var(--theme-menu-color);
         margin-right: 5px;
       }
       &.active {
-        background-color: #f1eeff;
+        background-color: var(--theme-menu-bg);
         .sub-menu {
           height: auto;
         }
       }
       &:hover {
-        background-color: rgba(241, 238, 255, 0.5);
+        background-color: var(--theme-menu-hover-bg);
       }
     }
     &.isCollapse {
@@ -147,7 +147,7 @@ export default {
           top: 0;
           right: -125px;
           width: 120px;
-          background-color: rgb(241, 238, 255);
+          background-color: var(--theme-menu-bg);
           z-index: 100;
           border-radius: 4px;
           &::before {

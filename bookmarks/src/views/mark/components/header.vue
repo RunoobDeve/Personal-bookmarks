@@ -45,7 +45,7 @@ export default {
   justify-content: space-between;
   align-items: center;
   box-shadow: 0 0 2px 0 rgba(41, 48, 66, 0.1);
-  background-color: #fff;
+  background-color: var(--theme-header-bg);
   z-index: 100;
   transition: all 0.3s;
   .toggle-btn {

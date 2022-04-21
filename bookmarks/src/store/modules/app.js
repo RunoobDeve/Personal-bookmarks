@@ -14,7 +14,7 @@ const menu = {
             width: 200
         },
         device: "desktop",
-        theme:"light"
+        theme: localStorage.getItem('theme') || "light"
     },
     getters: {
         sidebar: state => state.sidebar,
@@ -42,6 +42,7 @@ const menu = {
         },
         [types.TOGGLE_THEME](state,theme){
             state.theme = theme
+            localStorage.setItem('theme',theme)
         }
 
     },

@@ -1,43 +1,32 @@
-@light-text: #333;
-@dark-text: #fff;
-@light-body-bg: #f5f5f5;
-@dark-body-bg: #1a1a1a;
-@light-siderbar-bg: #f9f9f9;
-@dark-siderbar-bg: #2c2c2c;
-@light-header-bg: #f9f9f9;
-@dark-header-bg: #2c2c2c;
+:root {
+    --theme-color-scheme: light;
+    --theme-body-bg: #f5f5f5;
+    --theme-siderbar-bg: #f9f9f9;
+    --theme-header-bg: #fff;
+    --theme-menu-bg: #f1eeff;
+    --theme-menu-hover-bg: rgba(241, 238, 255, 0.5);
+    --theme-site-bg: #fff;
+    --theme-form-bg: #fff;
+    --theme-form-item-bg: #f5f5f5;
+    --theme-primary-color: #333;
+    --theme-menu-color: #555;
+    --theme-title-color: #666;
+    --theme-site-color: #a0aec0;
 
-.themeChange(@style) {
-    background-color: @style;
 }
 
-.dark-mode {
-    .themeChange(@dark-body-bg);
-
-    #siderbar {
-        background-color: @dark-siderbar-bg;
-        .siderbar-menu .menu-item.active{
-            
-        }
-    }
-
-    #header {
-        background-color: @dark-header-bg;
-
-    }
-}
-
-
-
-
-.light-mode {
-    .themeChange(@light-body-bg);
-
-    #siderbar {
-        background-color: @light-siderbar-bg;
-    }
-
-    #header {
-        background-color: @light-header-bg;
-    }
+#app[data-theme=dark] {
+    --theme-color-scheme: light;
+    --theme-body-bg: #000;
+    --theme-siderbar-bg: #2c2e2f;
+    --theme-header-bg: #2c2e2f;
+    --theme-menu-bg: rgba(241, 238, 255, 0.4);
+    --theme-menu-hover-bg: rgba(241, 238, 255, 0.4);
+    --theme-site-bg: #2c2e2f;
+    --theme-form-bg: #2c2e2f;
+    --theme-form-item-bg: #363738;
+    --theme-primary-color: #ddd;
+    --theme-menu-color: #d6d9df;
+    --theme-title-color: #cccc;
+    --theme-sider-color: #6c757d;
 }

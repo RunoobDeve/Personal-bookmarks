@@ -304,13 +304,14 @@ export default {
   right: 0;
   bottom: 0;
   top: 0;
-  background-color: rgba(0, 0, 0, 40%);
+  background-color: rgba(33, 33, 33, .8);
   z-index: 101;
 }
 .main-content {
   margin-top: 60px;
   padding: 20px;
   transition: all 0.3s;
+  background-color: var(--theme-body-bg);
 }
 .banner-img {
   background-image: url("/static/img/sky.jpg");
@@ -325,10 +326,6 @@ export default {
   .handle {
     float: right;
     margin-top: 14px;
-    // position: fixed;
-    // right: 20px;
-    // top: 305px;
-    // z-index: 10;
     img {
       margin-left: 10px;
       cursor: pointer;
@@ -339,7 +336,7 @@ export default {
     line-height: 32px;
     font-weight: bold;
     margin: 10px 0;
-    color: #666;
+    color: var(--theme-title-color);
     display: block;
   }
   .mark-box {
@@ -354,7 +351,7 @@ export default {
       padding: 5px 10px;
       width: 20%;
       .mark-wrapper {
-        background-color: #fff;
+        background-color: var(--theme-site-bg);
         border-radius: 5px;
         padding: 10px;
         box-shadow: 0px 0px 10px -5px rgba(158, 158, 158, 0.1);
@@ -384,7 +381,7 @@ export default {
         }
         .mark-name {
           font-weight: bold;
-          color: #000;
+          color: var(--theme-primary-color);
         }
         .mark-desc {
           color: #a0aec0;
@@ -444,7 +441,7 @@ export default {
   right: 0;
   top: 0;
   bottom: 0;
-  background-color: #fff;
+  background-color: var(--theme-form-bg);
   width: 320px;
   padding: 40px 20px;
   transition: all 0.5s;
@@ -452,7 +449,7 @@ export default {
   z-index: 1001;
   .add-title {
     font-size: 18px;
-    color: #000;
+    color: var(--theme-primary-color);
     font-weight: bold;
   }
   .form-item {
@@ -465,13 +462,14 @@ export default {
     .site-input {
       width: 100%;
       border: unset;
-      background-color: #f5f5f5;
+      background-color: var(--theme-form-item-bg);
       border-radius: 5px;
       line-height: 32px;
       padding: 5px 10px;
       outline: none;
       margin-top: 10px;
       border: 1px solid transparent;
+      color: var(--theme-primary-color);
       &:focus {
         border-color: #2ed573;
       }
@@ -479,7 +477,7 @@ export default {
     .site-textarea {
       width: 100% !important;
       border: unset;
-      background-color: #f5f5f5;
+      background-color: var(--theme-form-item-bg);
       border-radius: 5px;
       line-height: 32px;
       padding: 5px 10px;
@@ -487,6 +485,8 @@ export default {
       margin-top: 10px;
       height: 120px;
       border: 1px solid transparent;
+      color: var(--theme-primary-color);
+      resize: none;
       &:focus {
         border-color: #2ed573;
       }
