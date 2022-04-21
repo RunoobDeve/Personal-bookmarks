@@ -2,6 +2,7 @@ const types = {
     HANDLE_LEFT_MENU: 'handle_left_menu',
     TOOGGLE_DEVICE: "toggle_device",
     CLOSE_LEFT_MENU: 'close_left_menu',
+    TOGGLE_THEME :'toggle_theem',
 }
 const menu = {
     state: {
@@ -12,12 +13,14 @@ const menu = {
             opened: true,
             width: 200
         },
-        device: "desktop"
+        device: "desktop",
+        theme:"light"
     },
     getters: {
         sidebar: state => state.sidebar,
         isCollapse: state => state.isCollapse,
         device: state => state.device,
+        theme: state => state.theme,
     },
     mutations: {
         [types.HANDLE_LEFT_MENU](state) {
@@ -36,6 +39,9 @@ const menu = {
         [types.CLOSE_LEFT_MENU](state) {
             state.sidebar.opened = false
             state.isCollapse = true
+        },
+        [types.TOGGLE_THEME](state,theme){
+            state.theme = theme
         }
 
     },
@@ -48,6 +54,9 @@ const menu = {
         },
         closeLfetMenu: ({ commit }) => {
             commit(types.CLOSE_LEFT_MENU)
+        },
+        toggleTheme:({commit},theme)=>{
+            commit(types.TOGGLE_THEME,theme)
         }
     }
 }

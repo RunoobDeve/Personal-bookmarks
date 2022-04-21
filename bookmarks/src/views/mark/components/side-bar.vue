@@ -79,9 +79,9 @@ export default {
   },
   computed: {
     ...mapState({
-      isCollapse: (state) => state.menu.isCollapse,
-      sidebar: (state) => state.menu.sidebar,
-      device: (state) => state.menu.device,
+      isCollapse: (state) => state.app.isCollapse,
+      sidebar: (state) => state.app.sidebar,
+      device: (state) => state.app.device,
     }),
   },
   mounted() {

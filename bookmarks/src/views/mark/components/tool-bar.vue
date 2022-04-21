@@ -3,29 +3,28 @@
     <div class="tool-top" @click="toTop">
       <div class="triangle"></div>
     </div>
-    <!-- <div
-        @click="toggleTheme"
-        :class="['tool-theme', theme == 'light' ? 'light-theme' : 'dark-theme']"
-      >
-        <i v-show="theme == 'light'" class="iconfont icontaiyang-copy"></i>
-        <i v-show="theme == 'dark'" class="iconfont iconmoonbyueliang"></i>
-      </div> -->
+    <div
+      @click="toggleTheme"
+      :class="['tool-theme', theme == 'light' ? 'light-theme' : 'dark-theme']"
+    >
+      <i v-show="theme == 'light'" class="iconfont icontaiyang-copy"></i>
+      <i v-show="theme == 'dark'" class="iconfont iconmoonbyueliang"></i>
+    </div>
   </div>
 </template>
 
 <script>
+import { mapGetters } from "vuex";
 export default {
   data() {
-    return {
-      theme: "light",
-    };
+    return {};
   },
   methods: {
     toggleTheme() {
       if (this.theme == "light") {
-        this.theme = "dark";
+        this.$store.dispatch('toggleTheme', 'dark')
       } else {
-        this.theme = "light";
+        this.$store.dispatch('toggleTheme', 'light')
       }
     },
     toTop() {
@@ -39,6 +38,9 @@ export default {
         }
       }, 10);
     },
+  },
+  computed: {
+    ...mapGetters(["theme"]),
   },
 };
 </script>
@@ -101,9 +103,22 @@ export default {
     cursor: pointer;
     .iconfont {
       font-size: 24px;
-      color: #fff;
       line-height: 40px;
       transition: all 0.3s ease-in-out;
+    }
+    &.light-theme {
+      background-color: #fff;
+      box-shadow: 0 0 2px #fff;
+      .iconfont {
+        color: #333;
+      }
+    }
+    &.dark-theme {
+      background-color: #333;
+      box-shadow: 0 0 2px #333;
+      .iconfont {
+        color: #fff;
+      }
     }
   }
 }
