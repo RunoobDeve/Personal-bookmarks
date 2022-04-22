@@ -108,6 +108,7 @@ export default {
     height: 60px;
     background-color: var(--theme-header-bg);
     vertical-align: middle;
+    transition: all .3s;
     img {
       max-height: 40px;
       vertical-align: middle;
@@ -170,6 +171,7 @@ export default {
   }
   .siderbar-slogan {
     padding: 20px 0;
+   color: var(--theme-primary-color);
   }
 }
 </style>

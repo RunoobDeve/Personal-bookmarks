@@ -16,26 +16,26 @@
   </body>
 </html>
 <script>
-  // var siteObj=[]
-  // $('.tab-content').each(function(index,dom){
-  //   let domObj={
+  var siteObj=[]
+  $('.content-layout').each(function(index,dom){
+    let domObj={
 
-  //   }
-  //   domObj.name=$(dom).prev().prev().text()
-  //   let domArr = []
-  //   $(dom).find('.tab-pane').each(function(index,tabdom){
-  //     $(tabdom).find('.url-card').each(function(index,urldom){
-  //       let siteObj = {}
-  //       siteObj.id = $(urldom).find('.card').data('id')
-  //       siteObj.img = $(urldom).find('img').data('src')
-  //       siteObj.name = $(urldom).find('strong').text()
-  //       siteObj.desc = $(urldom).find('.text-xs').text()
-  //       siteObj.url = $(urldom).find('.card').data('url')
-  //       domArr.push(siteObj)
-  //     })
-  //   })
-  //   domObj.domArr = domArr
-  //   siteObj.push(domObj)
-  // })
-  // console.log(JSON.stringify(siteObj))
+    }
+    domObj.name=$(dom).prev().prev().text()
+    let domArr = []
+    $(dom).find('.row').each(function(index,tabdom){
+      $(tabdom).find('.url-card').each(function(index,urldom){
+        let siteObj = {}
+        siteObj.id = $(urldom).find('.card').data('id')
+        siteObj.img = $(urldom).find('img').data('src')
+        siteObj.name = $(urldom).find('strong').text()
+        siteObj.desc = $(urldom).find('.text-xs').text()
+        siteObj.url = $(urldom).find('.card').data('url')
+        domArr.push(siteObj)
+      })
+    })
+    domObj.domArr = domArr
+    siteObj.push(domObj)
+  })
+  console.log(JSON.stringify(siteObj))
 </script>
