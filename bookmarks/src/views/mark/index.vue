@@ -29,7 +29,7 @@
           <input
             style="display: none"
             type="file"
-            accept=".json"
+            accept="application/json,text/html"
             ref="jsonInput"
             id="json"
           />
@@ -150,6 +150,8 @@ import toolBar from "./components/tool-bar.vue";
 import siderBar from "./components/side-bar.vue";
 import Header from "./components/header.vue";
 import resize from "@/mixin/resize";
+// import {htmlparser2} from 'htmlparser2';
+const htmlparser2 = require('htmlparser2')
 import { nanoid } from "nanoid";
 import { mapGetters } from "vuex";
 export default {
@@ -207,10 +209,6 @@ export default {
       document.body.appendChild(link);
       link.click();
       document.body.removeChild(link);
-      this.$message({
-        type: "success",
-        message: "导出成功",
-      });
     },
     importJson() {
       this.$nextTick(() => {
@@ -273,16 +271,28 @@ export default {
   mounted() {
     let inputDom = document.getElementById("json");
     inputDom.addEventListener("change", (event) => {
+      let file = event.target.files[0];
       let reader = new FileReader();
-      reader.readAsText(event.target.files[0]);
+      reader.readAsText(file);
       reader.onloadend = () => {
-        const myCollect = JSON.parse(reader.result);
-        this.myCollect = [...this.myCollect, ...myCollect];
-        localStorage.setItem("myCollect", JSON.stringify(this.myCollect));
-        this.$message({
-          type: "success",
-          message: "导入成功",
-        });
+        if (file.type == "text/html") {
+          console.log(typeof(reader.result));
+          console.log(htmlparser2)
+          let document = htmlparser2.parseDocument(reader.result)
+          console.log(document)
+        } else {
+          // const myCollect = JSON.parse(reader.result);
+          // this.myCollect = [...this.myCollect, ...myCollect];
+          // localStorage.setItem("myCollect", JSON.stringify(this.myCollect));
+        }
+        return false;
+        // const myCollect = JSON.parse(reader.result);
+        // this.myCollect = [...this.myCollect, ...myCollect];
+        // localStorage.setItem("myCollect", JSON.stringify(this.myCollect));
+        // this.$message({
+        //   type: "success",
+        //   message: "导入成功",
+        // });
       };
     });
   },
@@ -305,7 +315,7 @@ export default {
   right: 0;
   bottom: 0;
   top: 0;
-  background-color: rgba(33, 33, 33, .8);
+  background-color: rgba(33, 33, 33, 0.8);
   z-index: 101;
 }
 .main-content {
