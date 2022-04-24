@@ -1,41 +1,65 @@
 <!DOCTYPE html>
 <html lang="">
-  <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width,initial-scale=1.0">
-    <link rel="icon" href="<%= BASE_URL %>favicon.ico">
-    <title><%= htmlWebpackPlugin.options.title %></title>
-  </head>
-  <body>
-    <noscript>
-      <strong>We're sorry but <%= htmlWebpackPlugin.options.title %> doesn't work properly without JavaScript enabled. Please enable it to continue.</strong>
-    </noscript>
-    <div id="app"></div>
-    <!-- built files will be auto injected -->
-  </body>
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0">
+  <link rel="icon" href="<%= BASE_URL %>favicon.ico">
+  <title><%= htmlWebpackPlugin.options.title %></title>
+</head>
+
+<body>
+  <noscript>
+    <strong>We're sorry but <%= htmlWebpackPlugin.options.title %> doesn't work properly without JavaScript enabled.
+      Please enable it to continue.</strong>
+  </noscript>
+  <div id="app"></div>
+  <!-- built files will be auto injected -->
+</body>
+
 </html>
 <script>
-  var siteObj=[]
-  $('.content-layout').each(function(index,dom){
-    let domObj={
+  // var siteObj=[]
+  // $('.content-layout').each(function(index,dom){
+  //   let domObj={
 
-    }
-    domObj.name=$(dom).prev().prev().text()
-    let domArr = []
-    $(dom).find('.row').each(function(index,tabdom){
-      $(tabdom).find('.url-card').each(function(index,urldom){
-        let siteObj = {}
-        siteObj.id = $(urldom).find('.card').data('id')
-        siteObj.img = $(urldom).find('img').data('src')
-        siteObj.name = $(urldom).find('strong').text()
-        siteObj.desc = $(urldom).find('.text-xs').text()
-        siteObj.url = $(urldom).find('.card').data('url')
-        domArr.push(siteObj)
-      })
-    })
-    domObj.domArr = domArr
-    siteObj.push(domObj)
-  })
-  console.log(JSON.stringify(siteObj))
+  //   }
+  //   domObj.name=$(dom).prev().prev().text()
+  //   let domArr = []
+  //   $(dom).find('.row').each(function(index,tabdom){
+  //     $(tabdom).find('.url-card').each(function(index,urldom){
+  //       let siteObj = {}
+  //       siteObj.id = $(urldom).find('.card').data('id')
+  //       siteObj.img = $(urldom).find('img').data('src')
+  //       siteObj.name = $(urldom).find('strong').text()
+  //       siteObj.desc = $(urldom).find('.text-xs').text()
+  //       siteObj.url = $(urldom).find('.card').data('url')
+  //       domArr.push(siteObj)
+  //     })
+  //   })
+  //   domObj.domArr = domArr
+  //   siteObj.push(domObj)
+  // })
+  // console.log(JSON.stringify(siteObj))
+
+  // "id": 468,
+  //               "img": "https://api.iowen.cn/favicon/www.qianduan.net.png",
+  //               "name": "前端观察",
+  //               "desc": "专注于网站前端设计与前端开发",
+  //               "url": "https://www.qianduan.net"
+  // let arr = []
+  // let id = "#JavaScriptAboutItem"
+  // $(id).find('.item').each(function (index, el) {
+  //   let obj = {
+
+  //   }
+  //   obj.title = $(el).find('span').text();
+  //   obj.description = $(el).find('.desc').text();
+  //   obj.url = $(el).parent().attr('href');
+
+  //   arr.push(obj)
+
+  // })
+  // console.log(JSON.stringify(arr))
 </script>

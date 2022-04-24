@@ -1,0 +1,1375 @@
+[
+    {
+        "category": "JavaScript相关",
+        "icon": "",
+        "site": [
+            {
+                "name": "JavaScript开发者应懂的33个概念",
+                "description": "这个项目是为了帮助开发者掌握 JavaScript 概念而创立的。它不是必备，但在未来学习（JavaScript）中，可以作为一篇指南。",
+                "url": "https://github.com/stephentian/33-js-concepts/blob/master/README.md"
+            },
+            {
+                "name": "JavaScript 秘密花园",
+                "description": "JavaScript 细节点分析",
+                "url": "http://bonsaiden.github.io/JavaScript-Garden/zh/"
+            },
+            {
+                "name": "ECMAScript 6 入门",
+                "description": "阮一峰的《ECMAScript 6入门》",
+                "url": "http://es6.ruanyifeng.com/#README"
+            },
+            {
+                "name": "30 seconds of code",
+                "description": "分享了大量有用的Javascript片段,你可以在30秒或更少时间中理解。",
+                "url": "https://30secondsofcode.org/"
+            },
+            {
+                "name": "JS 函数式编程指南",
+                "description": "JS 函数式编程指南 gitbook电子书",
+                "url": "https://llh911001.gitbooks.io/mostly-adequate-guide-chinese/content/"
+            },
+            {
+                "name": "TypeScript中文网",
+                "description": "TypeScript中文网中文文档",
+                "url": "https://www.tslang.cn/"
+            },
+            {
+                "name": "TypeScript Handbook",
+                "description": "TypeScript Handbook（中文版）",
+                "url": "https://zhongsp.gitbooks.io/typescript-handbook/content/"
+            }
+        ]
+    },
+    {
+        "category": "CSS相关",
+        "icon": "",
+        "site": [
+            {
+                "name": "Sass",
+                "description": "Sass 是成熟、稳定、强大的 CSS 扩展语言。",
+                "url": "http://sass.bootcss.com/"
+            },
+            {
+                "name": "Less",
+                "description": "给 CSS 加点料,是一门向后兼容的 CSS 扩展语言。",
+                "url": "https://less.bootcss.com/"
+            },
+            {
+                "name": "Stylus",
+                "description": "富有表现力的、动态的、健壮的CSS",
+                "url": "http://stylus-lang.com/"
+            },
+            {
+                "name": "Animate.css",
+                "description": "css内置了很多典型的css3动画,兼容性好使用方便。",
+                "url": "https://daneden.github.io/animate.css/"
+            },
+            {
+                "name": "CSS 选择器演示",
+                "description": "本css选择器可以通过本页面直观的理解 CSS 选择器的作用区域",
+                "url": "https://www.haorooms.com/tools/css_selecter/"
+            },
+            {
+                "name": "浏览器hack大全",
+                "description": "由于不同的浏览器，对CSS的解析认识不一样，因此会导致生成的页面效果不一样，于是就有了针对不同的浏览器写不同的CSS code，这就叫CSS hack",
+                "url": "http://browserhacks.com/"
+            },
+            {
+                "name": "CSS Hack Table",
+                "description": "CSS hack 表格",
+                "url": "https://swordair.com/tools/css-hack-table/"
+            },
+            {
+                "name": "LoadersCSS",
+                "description": "用 CSS 技术实现 loading 动画",
+                "url": "https://connoratherton.com/loaders"
+            },
+            {
+                "name": "text-spinners",
+                "description": "又是一款 spinners 效果的库，用来做 loading 正合适。",
+                "url": "https://github.com/maxbeier/text-spinners"
+            },
+            {
+                "name": "Can I Use",
+                "description": "一个检测浏览器对JS、HTML5、CSS、SVG或者其他Web前端相关特性支持程度的列表。",
+                "url": "https://caniuse.com/"
+            },
+            {
+                "name": "A Single Div",
+                "description": "纯CSS实现的div图片盒子,很有意思",
+                "url": "https://a.singlediv.com/"
+            },
+            {
+                "name": "30 Seconds of CSS",
+                "description": "收集了常用的CSS代码段,你可以通过30秒或者更少的时间去了解它",
+                "url": "https://30-seconds.github.io/30-seconds-of-css/"
+            },
+            {
+                "name": "CSS Inspiration -- CSS灵感",
+                "description": "学习 CSS 的灵感，以分类的形式，展示不同 CSS 属性或者不同的课题使用 CSS 来解决的各种方法。",
+                "url": "https://chokcoco.github.io/CSS-Inspiration/#/"
+            },
+            {
+                "name": "CSScomb",
+                "description": "一个超棒的CSS属性排序工具",
+                "url": "http://csscomb.com/"
+            },
+            {
+                "name": "Button Generator",
+                "description": "提供各种按钮的CSS代码，你可以从预设的按钮中选择并使用模板用于自己的设计",
+                "url": "https://www.bestcssbuttongenerator.com/"
+            },
+            {
+                "name": "EnjoyCSS",
+                "description": "一个完整的代码生成器，可以自定义输入域或CSS3按钮",
+                "url": "https://enjoycss.com/"
+            },
+            {
+                "name": "Animista",
+                "description": "CSS动态效果样式在线自定义",
+                "url": "http://animista.net/"
+            },
+            {
+                "name": "AniCollection",
+                "description": "CSS3动效预设收藏集合",
+                "url": "http://anicollection.github.io/#/"
+            },
+            {
+                "name": "CSS Generator Tool",
+                "description": "CSS各种对象样式和效果在线生成工具",
+                "url": "https://cssgenerator.org/"
+            },
+            {
+                "name": "Ceaser",
+                "description": "CSS贝塞尔动画在线调试工具",
+                "url": "https://matthewlein.com/tools/ceaser"
+            },
+            {
+                "name": "CSS Gradient Generator",
+                "description": "CSS渐变在线生成器",
+                "url": "http://www.colorzilla.com/gradient-editor/"
+            },
+            {
+                "name": "CSS Reference",
+                "description": "非常棒的免费的CSS属性指导手册",
+                "url": "https://cssreference.io/"
+            },
+            {
+                "name": "ColorSpark",
+                "description": "随机生成好看的颜色、渐变色，可以一键复制 CSS 代码",
+                "url": "https://colorspark.app/"
+            },
+            {
+                "name": "FontSpark",
+                "description": "随机字体在线预览，用过都说好。",
+                "url": "https://fontspark.app/"
+            },
+            {
+                "name": "Pixel Art to CSS",
+                "description": "由React提供的像素艺术动画和绘图Web应用程序",
+                "url": "https://github.com/jvalen/pixel-art-react"
+            },
+            {
+                "name": "Autoprefixer CSS",
+                "description": "(在线)autoprefixer是一个postcss插件，用于解析CSS并添加供应商前缀。",
+                "url": "http://autoprefixer.github.io/"
+            }
+        ]
+    },
+    {
+        "category": "UI框架",
+        "icon": "",
+        "site": [
+            {
+                "name": "Bootstrap",
+                "description": "简洁、直观、强悍的前端开发框架，让web开发更迅速、简单。",
+                "url": "http://www.bootcss.com/"
+            },
+            {
+                "name": "Foundation",
+                "description": "一个易用、强大而且灵活的框架,用于构建基于任何设备上的 Web 应用。",
+                "url": "https://foundation.zurb.com/"
+            },
+            {
+                "name": "Pure.css",
+                "description": "雅虎公司出品的一组轻量级、响应式纯css模块,适用于任何Web项目",
+                "url": "https://purecss.io/"
+            },
+            {
+                "name": "Semantic UI",
+                "description": "一个用来帮助设计出漂亮的、响应化、人性化的网络框架",
+                "url": "https://semantic-ui.com/"
+            },
+            {
+                "name": "Material UI",
+                "description": "一组反应元件，实现谷歌的材料设计",
+                "url": "https://material-ui.com/"
+            },
+            {
+                "name": "Element",
+                "description": "一套为开发者、设计师和产品经理准备的基于 Vue 2.0 的桌面端组件库",
+                "url": "http://element-cn.eleme.io/#/zh-CN"
+            },
+            {
+                "name": "iView",
+                "description": "一套基于 Vue.js 的高质量 UI 组件库",
+                "url": "https://www.iviewui.com/"
+            },
+            {
+                "name": "Ant Design",
+                "description": "蚂蚁金服的开箱即用的中台前端/设计解决方案",
+                "url": "https://ant.design/index-cn"
+            },
+            {
+                "name": "Layui",
+                "description": "一款采用自身模块规范编写的前端 UI 框架，遵循原生 HTML/CSS/JS 的书写与组织形式，门槛极低，拿来即用",
+                "url": "https://www.layui.com/"
+            },
+            {
+                "name": "AmazeUI",
+                "description": "妹子UI HTML5 跨屏前端框架",
+                "url": "http://amazeui.org/"
+            },
+            {
+                "name": "MetroUI",
+                "description": "好看好用，重点是样式特别、个性",
+                "url": "https://metroui.org.ua/"
+            },
+            {
+                "name": "QMUI Web",
+                "description": "腾讯旗下团队 web UI解决方案",
+                "url": "https://qmuiteam.com/web/page/index.html"
+            },
+            {
+                "name": "MDUI",
+                "description": "MDUI 是一套用于开发 Material Design 网页的前端框架",
+                "url": "https://www.mdui.org/"
+            },
+            {
+                "name": "Mobi.css",
+                "description": "轻量灵活的移动端 CSS 框架",
+                "url": "http://getmobicss.com/"
+            },
+            {
+                "name": "Framework7",
+                "description": "完美的HTML框架,构建精美的iOS & Android 应用",
+                "url": "http://www.framework7.cn/"
+            },
+            {
+                "name": "PaperCSS",
+                "description": "一个不太常规的CSS框架，如果你希望你的网站有手绘风格感觉，选择它准没错。",
+                "url": "https://www.getpapercss.com/"
+            },
+            {
+                "name": "FlowUI",
+                "description": "基于Seajs/jQuery构建，内置CSS组件、JS插件、模块化开发体系、自动化开发工具、常见场景解决方案。",
+                "url": "https://flow-ui.refined-x.com/"
+            }
+        ]
+    },
+    {
+        "category": "学习资源",
+        "icon": "",
+        "site": [
+            {
+                "name": "高级前端进阶",
+                "description": "整理最全的面试知识点，帮助前端开发者快速提升",
+                "url": "https://daijl.cn"
+            },
+            {
+                "name": "Mozilla 开发者网络",
+                "description": "MDN Web Docs 网站提供开放网络（Open Web）技术有关的信息，包括用于网站和渐进式网络应用的 HTML、CSS 和 API。",
+                "url": "https://developer.mozilla.org/zh-CN/"
+            },
+            {
+                "name": "freeCodeCamp中文社区",
+                "description": " 一个帮助你学习编程的开源社区,开启你的软件工程师生涯.",
+                "url": "https://www.freecodecamp.cn/"
+            },
+            {
+                "name": "学习CSS布局",
+                "description": "本站教授的是现在广泛使用于网站布局领域的CSS基础。",
+                "url": "http://zh.learnlayout.com/"
+            },
+            {
+                "name": "WEB开发基础 — 优设网",
+                "description": "网站开发基础知识，最佳实践手册。是由谷歌发布的一个简单易懂的多设备网络开发指南。",
+                "url": "http://wf.uisdc.com/cn/"
+            },
+            {
+                "name": "菜鸟教程",
+                "description": "菜鸟教程,提供了编程的基础技术教程.学的不仅是技术，更是梦想！",
+                "url": "http://www.runoob.com/"
+            },
+            {
+                "name": "w3school",
+                "description": "w3school 在线教程 , 全球最大的中文 Web 技术教程。",
+                "url": "http://www.w3school.com.cn/"
+            },
+            {
+                "name": "百度前端技术学院",
+                "description": "百度前端技术学院是一个为大学生创办的免费的前端技术实践、分享、交平台。",
+                "url": "http://ife.baidu.com/"
+            },
+            {
+                "name": "W3-Help",
+                "description": "系统的介绍某些知识点，帮助开发者正确理解该知识点的概念及与其他知识点的关联性，梳理知识体系。",
+                "url": "http://www.w3help.org/zh-cn/kb"
+            },
+            {
+                "name": "前端开发者手册",
+                "description": "这是任何人都可以用来学习前端的实践手册, 它概述并讨论了前端工程的实践。",
+                "url": "https://dwqs.gitbooks.io/frontenddevhandbook/content/"
+            },
+            {
+                "name": "前端笔记本",
+                "description": "《前端笔记本》涵盖了 Web 前端开发所需的全部基本知识以及所对应的学习路径。",
+                "url": "https://li-xinyang.gitbooks.io/frontend-notebook/content/?q="
+            },
+            {
+                "name": "表严肃-不要水，讲干货",
+                "description": "基础教程视频,B站良心up主,满满的干货.",
+                "url": "http://biaoyansu.com/"
+            },
+            {
+                "name": "scriptoj",
+                "description": "国人开发的前端题库，可以用作评测系统，带有讨论区",
+                "url": "http://scriptoj.mangojuice.top/"
+            },
+            {
+                "name": "如何跟上前端开发的最新前沿",
+                "description": "如何跟上前端开发的最新前沿 前端开发 - The Recipe",
+                "url": "https://uptodate.frontendrescue.org/zh/"
+            },
+            {
+                "name": "HEAD",
+                "description": "最全的 head 列表，真心佩服这种偏执的整理能力",
+                "url": "https://github.com/joshbuchea/HEAD"
+            },
+            {
+                "name": "前端开发仓库",
+                "description": "Web前端开发仓库，收录常用的JavaScript及jQuery插件，并提供在线演示效果。",
+                "url": "http://code.ciaoca.com/"
+            },
+            {
+                "name": "learnGitBranching",
+                "description": "learnGitBranching是一个git仿真沙盒，提供一系列的交互式学习指导/挑战，用来加快学习git提交树如何工作。learnGitBranching的主界面左边是模拟终端窗口，另外是图示区。图示区用图形表明了git代码库当前的提交记录、分支、HEAD指向等。 目前有法语、韩语、日语以及中文版本。",
+                "url": "https://github.com/pcottle/learnGitBranching"
+            },
+            {
+                "name": "计算机书籍控",
+                "description": "Best Computer Books, 整理最全最经典的计算机书籍,提供PDF下载",
+                "url": "http://bestcbooks.com/"
+            },
+            {
+                "name": "前端九部-入门者手册2019",
+                "description": "九部成员合著的web前端开发零基础入门手册",
+                "url": "https://www.yuque.com/fe9/basic"
+            },
+            {
+                "name": "力扣-LeetCode",
+                "description": "码，码不停题. 全球极客挚爱的高质量技术成长平台，想要学习和提升专业能力从这里开始，充足技术干货等你来啃，轻松拿下 Dream Offer！",
+                "url": "https://leetcode-cn.com/"
+            },
+            {
+                "name": "CODE",
+                "description": "适用于初级的免费游戏式编程教学",
+                "url": "https://studio.code.org/"
+            },
+            {
+                "name": "技术胖",
+                "description": "技术胖,该站有很多免费的前端学习视频",
+                "url": "https://jspang.com/"
+            },
+            {
+                "name": "前端周刊",
+                "description": "前端周刊，给前端同学准备的每周1小时阅读清单",
+                "url": "https://frontend-weekly.com/"
+            },
+            {
+                "name": "Git的奇技淫巧",
+                "description": "列举了常用的 Git 命令和一些小技巧",
+                "url": "https://github.com/521xueweihan/git-tips"
+            }
+        ]
+    },
+    {
+        "category": "API文档",
+        "icon": "",
+        "site": [
+            {
+                "name": "HTML5",
+                "description": "HTML5开发文档,开源(w3c组织)",
+                "url": "https://www.w3.org/html/ig/zh/wiki/HTML5"
+            },
+            {
+                "name": "HTML5 + API",
+                "description": "HTML5+规范,HTML5中国产业联盟",
+                "url": "http://www.html5plus.org/doc/h5p.html"
+            },
+            {
+                "name": "CSS参考手册",
+                "description": "Web前端开发人员提供最新、最全的CSS中文版在线资料，涵盖CSS3参考手册。",
+                "url": "http://css.doyoe.com/"
+            },
+            {
+                "name": "NEC(CSS规范)",
+                "description": "NEC包括了规范、框架、代码库、插件等内容，致力于为前端开发人员提供高效率高质量的前端页面开发解决方案。",
+                "url": "http://nec.netease.com/"
+            },
+            {
+                "name": "jQuery API 中文文档",
+                "description": "jQuery API 中文文档 | jQuery API 中文在线手册 | jquery api 载 | jquery api chm",
+                "url": "http://jquery.cuishifeng.cn/index.html"
+            },
+            {
+                "name": "vue.js中文文档",
+                "description": "vue.js官方中文文档",
+                "url": "https://cn.vuejs.org/"
+            },
+            {
+                "name": "npm 中文文档",
+                "description": "npm 是 JavaScript 世界的包管理工具，并且是 Node.js 平台的默认包管理工具。通过 npm 可以安装、共享、分发代码，管理项目依赖关系。npm，是全球最大的开源库生态系统。",
+                "url": "https://www.npmjs.cn/"
+            },
+            {
+                "name": "Node.js 中文文档",
+                "description": "Node.js 是一个基于 Chrome V8 引擎的 JavaScript 运行环境。Node.js 使用了一个事件驱动、非阻塞式 I/O的模型，使其轻量又高效。Node.js 的包管理器",
+                "url": "https://www.nodeapp.cn/"
+            },
+            {
+                "name": "React 中文文档",
+                "description": "用于构建用户界面的 JavaScript 库",
+                "url": "https://react.docschina.org/"
+            },
+            {
+                "name": "React Native 中文网",
+                "description": "使用JavaScript和React编写原生移动应用",
+                "url": "https://reactnative.cn/"
+            },
+            {
+                "name": "Node.js 中文网API",
+                "description": "nodejs中文网中文文档",
+                "url": "http://nodejs.cn/api/"
+            },
+            {
+                "name": "Flutter",
+                "description": "Flutter是谷歌的移动UI框架，可以快速在iOS和Android上构建高质量的原生用户界面。",
+                "url": "https://flutterchina.club/"
+            },
+            {
+                "name": "html5 Platform",
+                "description": "HTML5的web浏览技术图谱",
+                "url": "https://platform.html5.org/"
+            }
+        ]
+    },
+    {
+        "category": " 框架类库",
+        "icon": "",
+        "site": [
+            {
+                "name": "JQuery",
+                "description": "jQuery是一个快速、简洁的JavaScript框架.",
+                "url": "http://jquery.com/"
+            },
+            {
+                "name": "Vue",
+                "description": "一套用于构建用户界面的渐进式框架.简单却不失优雅,小巧而不乏大匠",
+                "url": "https://cn.vuejs.org/"
+            },
+            {
+                "name": "React",
+                "description": "React是一个JavaScript框架,用于构建“可预期的”和“声明式的”Web用户界面.",
+                "url": "https://react.docschina.org/"
+            },
+            {
+                "name": "Angular",
+                "description": "一套框架，多种平台移动端 & 桌面端",
+                "url": "https://www.angular.cn/"
+            },
+            {
+                "name": "AngularJs",
+                "description": "Google推出的MVVM框架",
+                "url": "http://www.angularjs.net.cn/"
+            },
+            {
+                "name": "Zepto",
+                "description": "Zepto最初是为移动端开发的库,是jQuery的轻量级替代品",
+                "url": "https://github.com/madrobby/zepto"
+            },
+            {
+                "name": "Flutter",
+                "description": "Flutter是谷歌的移动UI框架，可以快速在iOS和Android上构建高质量的原生用户界面。",
+                "url": "https://flutter.io/"
+            },
+            {
+                "name": "Backbone",
+                "description": "一套web开发框架,基于jQuery和underscore的一个前端js框架。",
+                "url": "https://github.com/jashkenas/backbone"
+            },
+            {
+                "name": "Ember.js",
+                "description": "一个用于创建 web 应用的 JavaScript MVC 框架",
+                "url": "https://www.emberjs.com/"
+            },
+            {
+                "name": "Preact",
+                "description": "一个快速轻量的 React 替代方案，具有 ES6 API、组件化和虚拟 DOM",
+                "url": "https://preactjs.com/"
+            },
+            {
+                "name": "Egg",
+                "description": "一个用于更好地构建企业应用的框架，内置流程管理，高度可定制，有强大的插件系统。",
+                "url": "https://eggjs.org/zh-cn/"
+            },
+            {
+                "name": "KISSY",
+                "description": "KISSY 是一款跨终端、模块化、高性能、使用简单的 JavaScript 框架。",
+                "url": "http://docs.kissyui.com/"
+            },
+            {
+                "name": "RequireJS",
+                "description": "RequireJS是一个非常小巧的JavaScript模块载入框架,是AMD规范最好的实现者之一",
+                "url": "http://www.requirejs.cn/"
+            },
+            {
+                "name": "Sea.js",
+                "description": "SeaJS是一个遵循CMD规范的JavaScript模块加载框架",
+                "url": "https://seajs.github.io/seajs/docs/"
+            }
+        ]
+    },
+    {
+        "category": "模板插件",
+        "icon": "",
+        "site": [
+            {
+                "name": "Swiper",
+                "description": "目前应用较广泛的移动端网页触摸内容滑动js插件",
+                "url": "https://www.swiper.com.cn/"
+            },
+            {
+                "name": "art-template",
+                "description": "一个简约、超快的模板引擎。它采用作用域预声明的技术来优化模板渲染速度，从而获得接近 JavaScript 极限的运行性能，并且同时支持 NodeJS 和浏览器。",
+                "url": "https://github.com/aui/art-template"
+            },
+            {
+                "name": "iScroll",
+                "description": "一个高性能，资源占用少，无依赖，多平台的javascript滚动插件",
+                "url": "https://github.com/cubiq/iscroll"
+            },
+            {
+                "name": "fullPage.js",
+                "description": "一个基于 jQuery 的插件,它能够很方便、很轻松的制作出全屏网站。",
+                "url": "https://alvarotrigo.com/fullPage/zh/"
+            },
+            {
+                "name": "Layer弹窗",
+                "description": "一个让你想到即可做到的web弹窗/层解决方案。",
+                "url": "http://layer.layui.com/"
+            },
+            {
+                "name": "Hint.css",
+                "description": "一款非常小巧的提示框效果插件。",
+                "url": "https://kushagragour.in/lab/hint/"
+            },
+            {
+                "name": "Lightbox",
+                "description": "以弹框形式集中展示图片的JavaScript库。",
+                "url": "https://lokeshdhakar.com/projects/lightbox2/"
+            },
+            {
+                "name": "Siema",
+                "description": "轻量级简单的纯 JavaScript 轮播插件，支持触摸手势",
+                "url": "https://pawelgrzybek.github.io/siema/"
+            },
+            {
+                "name": "Datatables",
+                "description": "Datatables是一款jquery表格插件，它是一个高度灵活的工具，可以将任何HTML表格添加高级的交互功能。",
+                "url": "http://datatables.club/"
+            },
+            {
+                "name": "Waterfall",
+                "description": "一款仿Pinterest网站的响应式无限动态加载图片瀑布流特效jQuery插件",
+                "url": "http://wlog.cn/waterfall/index-zh.html"
+            },
+            {
+                "name": "Sticker.js",
+                "description": "一款仿贴纸效果插件。",
+                "url": "http://stickerjs.cmiscm.com/"
+            },
+            {
+                "name": "multiScroll.js",
+                "description": "创建分割的多滚动页面特效插件。",
+                "url": "https://alvarotrigo.com/multiScroll/#first"
+            },
+            {
+                "name": "Sortable",
+                "description": "一个简约的 JavaScript 库用于在现代浏览器中拖放列表重新排序 ，支持任何JS框架。",
+                "url": "http://rubaxa.github.io/Sortable/"
+            },
+            {
+                "name": "jQuery File Upload Plugin",
+                "description": "一个有功能强大的 jQuery 上传组件，支持多文件选择、拖拽上传、验证、图片和多媒体预览等功能。",
+                "url": "https://blueimp.github.io/jQuery-File-Upload/"
+            },
+            {
+                "name": "Interact.js",
+                "description": " interact.js是一个随意改变形状插件，,它非常强大的，灵活拖放，改变大小，支持现代浏览器的多点触摸手势，基于SVG的运用，能运行在包括在IE8+的浏览器",
+                "url": "http://interactjs.io/"
+            },
+            {
+                "name": "Background-blur",
+                "description": "实用的超轻的跨浏览器的图像模糊 jQuery 插件，基于 SVG 生成，效果很好",
+                "url": "https://msurguy.github.io/background-blur/#"
+            },
+            {
+                "name": "blur-admin",
+                "description": "视觉冲击极强的管理后台，各种动画效果。",
+                "url": "https://github.com/akveo/blur-admin"
+            },
+            {
+                "name": "Holder.js",
+                "description": "占位图片生成器",
+                "url": "https://github.com/imsky/holder"
+            },
+            {
+                "name": "placeholder.js",
+                "description": "另一款占位图片生成器",
+                "url": "https://github.com/hustcc/placeholder.js"
+            },
+            {
+                "name": "Echo.js",
+                "description": "简单的JavaScript轻量级图像延迟加载库",
+                "url": "https://github.com/toddmotto/echo"
+            },
+            {
+                "name": "jQuery-LazyLoad",
+                "description": "基于 jQuery 的图片延迟加载插件，在用户滚动页面到图片之后才进行加载。对于有较多的图片的网页，使用图片延迟加载，能有效的提高页面加载速度",
+                "url": "https://github.com/tuupola/jquery_lazyload/"
+            },
+            {
+                "name": "Picdiet.js",
+                "description": "下一代js图片上传组件,节约服务器80%的带宽及硬盘容量，加快网站加载速度，降低服务器处理图片的负荷",
+                "url": "https://widget.picdiet.com/"
+            },
+            {
+                "name": "imagesLoaded",
+                "description": "检测图片是否加载完成的插件",
+                "url": "https://github.com/desandro/imagesloaded"
+            },
+            {
+                "name": "quicklink",
+                "description": "quicklink 是一个通过预加载资源来提升后续方案速度的轻量级工具库。旨在提升浏览过程中，用户访问后续页面时的加载速度。",
+                "url": "https://github.com/GoogleChromeLabs/quicklink"
+            },
+            {
+                "name": "AJAX-Cache",
+                "description": "AJAX-Cache是一款jQuery插件，基于localStorage/sessionStorage实现异步请求缓存功能，并提供“快照”和“定时”两种缓存模式。",
+                "url": "https://github.com/tower1229/AJAX-Cache"
+            }
+        ]
+    },
+    {
+        "category": "可视化",
+        "icon": "",
+        "site": [
+            {
+                "name": "D3.js",
+                "description": "用动态图形显示数据的JavaScript库",
+                "url": "https://d3js.org/"
+            },
+            {
+                "name": "Echarts",
+                "description": "百度开发的可定制的数据可视化图表",
+                "url": "http://echarts.baidu.com/"
+            },
+            {
+                "name": "three.js",
+                "description": "three.js是JavaScript编写的WebGL第三方库。提供了非常多的3D显示功能",
+                "url": "https://threejs.org/"
+            },
+            {
+                "name": "Highcharts",
+                "description": "Highcharts 是一个用纯JavaScript编写的一个图表库，兼容IE6+",
+                "url": "https://www.highcharts.com.cn/"
+            },
+            {
+                "name": "AntV",
+                "description": "蚂蚁金服全新一代数据可视化解决方案，致力于提供一套简单方便、专业可靠、无限可能的数据可视化最佳实践。",
+                "url": "https://antv.alipay.com/"
+            },
+            {
+                "name": "Chart.js",
+                "description": "一个简单、面向对象，为设计和开发者准备的图表绘制工具库",
+                "url": "https://www.chartjs.org/"
+            },
+            {
+                "name": "Leaflet",
+                "description": "一个用于移动端渲染交互式地图开源JavaScript库",
+                "url": "https://leafletjs.com/"
+            }
+        ]
+    },
+    {
+        "category": "编辑器",
+        "icon": "",
+        "site": [
+            {
+                "name": "Sublime Text",
+                "description": "神级代码编辑软件(Sublime Text 3),SublimeText是一个代码编辑器。也是HTML和散文先进的文本编辑器。",
+                "url": "http://www.sublimetext.com/"
+            },
+            {
+                "name": "Visual Studio Code",
+                "description": "一款免费开源的现代化轻量级代码编辑器，支持几乎所有主流的开发语言的语法高亮、智能代码补全、自定义热键、括号匹配、代码片段、代码对比 Diff、GIT等特性，支持插件扩展，并针对网页开发和云端应用开发做了优化。。",
+                "url": "https://code.visualstudio.com/"
+            },
+            {
+                "name": "Webstorm",
+                "description": "jetbrains公司旗下一款JavaScript 开发工具。目前已经被广大中国JS开发者誉为“Web前端开发神器",
+                "url": "http://www.jetbrains.com/webstorm/"
+            },
+            {
+                "name": "Atom",
+                "description": "Atom 是github专门为程序员推出的一个跨平台文本编辑器。",
+                "url": "https://atom.io/"
+            },
+            {
+                "name": "HBuilder",
+                "description": "HBuilder是当前最快的HTML开发工具,强大的代码助手帮你快速完成开发,最全的语法库和浏览器兼容性数据让浏览器碎片化不再头痛",
+                "url": "http://www.dcloud.io/"
+            },
+            {
+                "name": "Vim",
+                "description": "Vim是一个类似于Vi的著名的功能强大、高度可定制的文本编辑器，在Vi的基础上改进和增加了很多特性。",
+                "url": "https://www.vim.org/"
+            },
+            {
+                "name": "HBuilderX",
+                "description": "HBuilderX，简称HX，是轻如编辑器、强如IDE的合体版本",
+                "url": "http://www.dcloud.io/hbuilderx.html"
+            }
+        ]
+    },
+    {
+        "category": "门户&社区",
+        "icon": "",
+        "site": [
+            {
+                "name": "GitHub",
+                "description": "一个面向开源及私有软件项目的托管平台,全球最大同性交友网站",
+                "url": "https://github.com/"
+            },
+            {
+                "name": "Stack Overflow",
+                "description": "全球最大的技术问答网站，是一个与程序相关的IT技术问答网站",
+                "url": "https://stackoverflow.com/"
+            },
+            {
+                "name": "掘金 - juejin.im",
+                "description": "一个帮助开发者成长的社区",
+                "url": "https://juejin.im/welcome/frontend"
+            },
+            {
+                "name": "SegmentFault 思否",
+                "description": "SegmentFault 思否 为开发者提供问答、学习与交流编程知识的平台，创造属于开发者的时代！",
+                "url": "https://segmentfault.com/channel/frontend"
+            },
+            {
+                "name": "前端网（QDFuns）",
+                "description": "WEB前端开发工程师专业网站，一站式服务平台！",
+                "url": "https://www.qdfuns.com/"
+            },
+            {
+                "name": "博客园",
+                "description": "博客园是一个面向开发者的知识分享社区。",
+                "url": "https://www.cnblogs.com/"
+            },
+            {
+                "name": "伯乐在线",
+                "description": "WEB前端 - 伯乐在线",
+                "url": "http://web.jobbole.com/"
+            },
+            {
+                "name": "CSDN",
+                "description": "CSDN-专业IT技术社区",
+                "url": "https://www.csdn.net/nav/web"
+            },
+            {
+                "name": "前端乱炖",
+                "description": "前端乱炖，这里是最专业的前端知识平台，汇集国内大部分前端开发人员的前端花名册，最精彩的原创文章专栏，最专业的问答平台，最火热的话题频道，最丰富的线下线上活动。",
+                "url": "http://www.html-js.com/"
+            },
+            {
+                "name": "v2ex",
+                "description": "一个关于分享和探索的地方",
+                "url": "https://www.v2ex.com/"
+            },
+            {
+                "name": "众成翻译",
+                "description": "中国最好的技术翻译社区，最懂译者的翻译平台，奇虎360最大前端团队“奇舞团”出品",
+                "url": "https://zcfy.cc/"
+            },
+            {
+                "name": "InfoQ",
+                "description": "InfoQ 是一个实践驱动的社区资讯站点，致力于促进软件开发领域知识与创新的传播。",
+                "url": "https://www.infoq.cn/"
+            },
+            {
+                "name": "IBM-developerworks",
+                "description": "IBM developerWorks，IBM 的官方开发者项目。学习资源，开发工具，和技术社区。",
+                "url": "https://www.ibm.com/developerworks/cn/"
+            },
+            {
+                "name": "知乎",
+                "description": "每日必刷，可以关注前端开发等话题",
+                "url": "https://www.zhihu.com/"
+            },
+            {
+                "name": "w3cplus",
+                "description": "引领web前沿，打造前端精品教程",
+                "url": "https://www.w3cplus.com/"
+            },
+            {
+                "name": "HTML5梦工场",
+                "description": "HTML5梦工场是中国最大的前端开发者社区",
+                "url": "http://www.html5dw.com/"
+            },
+            {
+                "name": "大前端",
+                "description": "大前端是一个关注前端开发、用户体验设计、HTML5、CSS3、Javascript的前端开发独立博客。",
+                "url": "http://www.daqianduan.com/"
+            },
+            {
+                "name": "开源中国",
+                "description": "开源中国 www.oschina.net 是目前中国最大的开源技术社区。",
+                "url": "https://www.oschina.net/"
+            },
+            {
+                "name": "W3Cways",
+                "description": "Web前端学习之路，网站提供很丰富的相关技术中文文档。",
+                "url": "https://www.w3cways.com/"
+            },
+            {
+                "name": "WEB前端开发(css88)",
+                "description": "web前端开发，专注前端开发，关注用户体验，关注国内外最新最好的前端开发技术和前端开发资讯的专业博客",
+                "url": "https://www.css88.com/"
+            },
+            {
+                "name": "Awesomes-Web前端开发资源库",
+                "description": "Web前端开发工程师需要的免费开源的高质量前端库、框架和插件",
+                "url": "https://www.awesomes.cn/"
+            },
+            {
+                "name": "Helloweba",
+                "description": "Helloweba为广大WEB开发者提供Javascript前端、PHP后端、服务器运维知识以及业界相关的高质量技术文章分享.",
+                "url": "https://www.helloweba.net/"
+            },
+            {
+                "name": "PHP中文网",
+                "description": "php中文网-教程_手册_视频-免费php在线学习平台.",
+                "url": "http://www.php.cn/"
+            },
+            {
+                "name": "前端里",
+                "description": "专注于分享最前沿的Web开发技术，教程，资源和素材，是面向网站开发人员和设计师的学习交流平台",
+                "url": "http://www.yyyweb.com/"
+            }
+        ]
+    },
+    {
+        "category": "编译&构建&打包",
+        "icon": "",
+        "site": [
+            {
+                "name": "Webpack",
+                "description": "目前最热门的前端资源模块化管理和打包工具",
+                "url": "https://www.webpackjs.com/"
+            },
+            {
+                "name": "Gulp",
+                "description": "用自动化构建工具增强你的工作流程！",
+                "url": "https://www.gulpjs.com.cn/"
+            },
+            {
+                "name": "Grunt",
+                "description": "JavaScript 世界的构建工具",
+                "url": "https://www.gruntjs.net/"
+            },
+            {
+                "name": "Babel",
+                "description": "Babel 是一个 JavaScript 编译器。",
+                "url": "https://www.babeljs.cn/"
+            },
+            {
+                "name": "npm",
+                "description": "通过 npm 可以安装、共享、分发代码,管理项目依赖关系。",
+                "url": "https://www.npmjs.com/"
+            },
+            {
+                "name": "yarn",
+                "description": "快速、可靠、安全的依赖管理。",
+                "url": "https://www.yarnpkg.com/zh-Hans/"
+            },
+            {
+                "name": "bower",
+                "description": "bower是一种包管理器,它可用于搜索、安装和卸载如JavaScript、HTML、CSS之类的网络资源。",
+                "url": "https://bower.io/"
+            },
+            {
+                "name": "PostCSS",
+                "description": "是一个用 JavaScript 工具和插件转换 CSS 代码的工具",
+                "url": "https://www.postcss.com.cn/"
+            },
+            {
+                "name": "Parcel",
+                "description": "极速零配置Web应用打包工具",
+                "url": "https://parceljs.org/"
+            },
+            {
+                "name": "Critters",
+                "description": "webpack的插件，它可以很方便的配置内联关键css( critical CSS ),其余的css部分则会异步加载，由于它不使用无头浏览器(headless browser)呈现内容，因此快速轻巧。",
+                "url": "https://github.com/GoogleChromeLabs/critters"
+            },
+            {
+                "name": "Webpack Config Tool",
+                "description": "一款可视化的在线工具网站，你只需要选择前端项目运用到技术和相关配置，就能一键帮你生成webpack.config.js，省去你不少的麻烦。",
+                "url": "https://webpack.jakoblind.no/"
+            },
+            {
+                "name": "JSUI",
+                "description": "一个可视化分类、构建和管理 JavaScript 项目的工具。不管是前端应用还是后端应用，也不论使用的是哪种框架，只要项目有一个 package.json ，即可进行管理。",
+                "url": "https://github.com/kitze/JSUI"
+            },
+            {
+                "name": "PWA Universal Builder",
+                "description": "一款脚手架构建工具，方便创建基于Preact，React，Vue和Svelte的项目，开箱及支持Babel，Bublé，Browserlist，TypeScript，PostCSS，ESLint，Prettier和Service Workers！",
+                "url": "https://pwa.cafe/"
+            }
+        ]
+    },
+    {
+        "category": "小程序相关",
+        "icon": "",
+        "site": [
+            {
+                "name": "微信小程序文档",
+                "description": "微信小程序官方开发者文档",
+                "url": "https://developers.weixin.qq.com/miniprogram/dev/index.html"
+            },
+            {
+                "name": "微信开发者社区",
+                "description": "小程序开发者专区，微信公众平台,微信开放社区,开发者专区",
+                "url": "https://developers.weixin.qq.com/miniprogram/dev/index.html"
+            },
+            {
+                "name": "微信小程序开发资源汇总",
+                "description": "微信小程序开发资源汇总 awesome-wechat-weapp",
+                "url": "https://github.com/justjavac/awesome-wechat-weapp"
+            },
+            {
+                "name": "WePY",
+                "description": "支持组件化的小程序开发框架",
+                "url": "https://tencent.github.io/wepy/"
+            },
+            {
+                "name": "mpvue",
+                "description": "基于 Vue.js 的小程序开发框架，从底层支持 Vue.js 语法和构建工具体系",
+                "url": "http://mpvue.com/"
+            },
+            {
+                "name": "uni-app",
+                "description": "uni-app 是一个使用 Vue.js 开发所有前端应用的框架，开发者编写一套代码，可编译到iOS、Android、H5、以及各种小程序等多个平台。",
+                "url": "https://uniapp.dcloud.io/"
+            },
+            {
+                "name": "WeUI",
+                "description": "一套同微信原生视觉体验一致的基础样式库 为微信 Web 开发量身设计，令用户的使用感知更加统一",
+                "url": "https://github.com/Tencent/weui"
+            },
+            {
+                "name": "Taro",
+                "description": "使用 React 的方式开发小程序的框架，同时支持生成多端应用",
+                "url": "https://taro.js.org/"
+            },
+            {
+                "name": "Chameleon",
+                "description": "一套代码运行多端，一端所见即多端所见",
+                "url": "https://cmljs.org/#/"
+            },
+            {
+                "name": "小程序社区",
+                "description": "小程序社区|小程序开发社区-小程序开发联盟",
+                "url": "http://www.wxapp-union.com/"
+            }
+        ]
+    },
+    {
+        "category": "icon",
+        "icon": "",
+        "site": [
+            {
+                "name": "iconfont",
+                "description": "阿里妈妈MUX打造的图标库，是国内功能很强大且图标内容很丰富的矢量图标库。",
+                "url": "https://www.iconfont.cn/"
+            },
+            {
+                "name": "Font Awesome",
+                "description": "一款风靡全球的图标字体库和CSS框架。",
+                "url": "http://fontawesome.dashgame.com/"
+            },
+            {
+                "name": "icomoon",
+                "description": "免费开源的字体图标库。",
+                "url": "https://icomoon.io/"
+            },
+            {
+                "name": "MFG Labs icon set",
+                "description": "免费字体图标",
+                "url": "http://mfglabs.github.io/mfglabs-iconset/"
+            },
+            {
+                "name": "FindIcons",
+                "description": "免费图标和矢量文件",
+                "url": "https://findicons.com/"
+            },
+            {
+                "name": "Easy Icon",
+                "description": "提供 超过五十万个 SVG、PNG、ICO、ICNS格式图标搜索、图标下载服务。",
+                "url": "https://www.easyicon.net/"
+            },
+            {
+                "name": "iconmonstr",
+                "description": "外国字体图标网站,为项目提供免费的简单图标",
+                "url": "https://iconmonstr.com/"
+            },
+            {
+                "name": "FLATICON",
+                "description": "icon下载",
+                "url": "https://www.flaticon.com/"
+            },
+            {
+                "name": "ICONFINDER",
+                "description": "高质量付费图标下载",
+                "url": "https://www.iconfinder.com/"
+            },
+            {
+                "name": "Noun Project",
+                "description": "icon下载",
+                "url": "https://thenounproject.com/"
+            },
+            {
+                "name": "RPG-Awesome",
+                "description": "icon下载",
+                "url": "http://nagoshiashumari.github.io/Rpg-Awesome/"
+            },
+            {
+                "name": "Orion Icon Library",
+                "description": "多达6000专业免费的SVG矢量图标，还支持深度的定制，比如更换配色，更改线条粗细，变换图标风格(细线条、粗线条、扁平)，一键生成相关代码。",
+                "url": "https://orioniconlibrary.com/"
+            },
+            {
+                "name": "gitmoji",
+                "description": "可以使用在github上的emoji图标",
+                "url": "https://gitmoji.carloscuesta.me/"
+            },
+            {
+                "name": "Emoji Cheat Sheet",
+                "description": "可以使用在github上的emoji图标",
+                "url": "https://www.webfx.com/tools/emoji-cheat-sheet/"
+            },
+            {
+                "name": "Emoji searcher",
+                "description": "Emoji表情大全",
+                "url": "https://emoji.muan.co/"
+            },
+            {
+                "name": "草莓图标库",
+                "description": "为开发者设计的一套免费开源图标库",
+                "url": "http://chuangzaoshi.com/icon/"
+            },
+            {
+                "name": "Unicons",
+                "description": "超過 1000 個向量圖示免費下載，完美像素放大縮小不影響解析度",
+                "url": "https://iconscout.com/unicons"
+            },
+            {
+                "name": "Ikonate",
+                "description": "完全可定制的矢量图标",
+                "url": "https://www.ikonate.com/"
+            }
+        ]
+    },
+    {
+        "category": "图片",
+        "icon": "",
+        "site": [
+            {
+                "name": "Color Hunt",
+                "description": "网站配色专家",
+                "url": "https://colorhunt.co/"
+            },
+            {
+                "name": "Dribbble",
+                "description": "设计灵感",
+                "url": "https://dribbble.com/"
+            },
+            {
+                "name": "Pixabay",
+                "description": "全球最大的免费可商用高清图库网站，超过130万张免费的优质图片及视频素材。",
+                "url": "https://pixabay.com/"
+            },
+            {
+                "name": "StockSnap.io",
+                "description": "高清免费大图素材，不用登陆直接可以下载，每周更新超过百张高清免费图片。",
+                "url": "https://stocksnap.io/"
+            },
+            {
+                "name": "全球酷站中心",
+                "description": "同步更新全球html5网站，很适合学习最新网站设计趋势。",
+                "url": "http://iiimg.cn/"
+            },
+            {
+                "name": "罫線・飾り罫ライン素材",
+                "description": "分割线素材",
+                "url": "http://free-line-design.com/"
+            },
+            {
+                "name": "loading.io",
+                "description": "loading图生成",
+                "url": "https://loading.io/"
+            },
+            {
+                "name": "wallhalla",
+                "description": "强大的检索功能图库",
+                "url": "https://wallhalla.com/"
+            },
+            {
+                "name": "pngimg",
+                "description": "pngimg图片素材",
+                "url": "http://pngimg.com/"
+            },
+            {
+                "name": "Color Hex",
+                "description": "配色网",
+                "url": "https://www.colorhexa.com/"
+            },
+            {
+                "name": "flatuicolors",
+                "description": "扁平化配色",
+                "url": "https://flatuicolors.com/"
+            },
+            {
+                "name": "Subtle Patterns",
+                "description": "Patterns素材,网页背景图",
+                "url": "https://www.toptal.com/designers/subtlepatterns/"
+            },
+            {
+                "name": "Pttrns",
+                "description": "App界面灵感",
+                "url": "https://pttrns.com/"
+            },
+            {
+                "name": "Lapa",
+                "description": "产品官网、落地页设计欣赏",
+                "url": "https://www.lapa.ninja/"
+            },
+            {
+                "name": "Cool Backgrounds",
+                "description": "生成非常酷的彩色背景图像",
+                "url": "https://coolbackgrounds.io/"
+            },
+            {
+                "name": "365psd",
+                "description": "下载免费高品质的 PSD 文件、插图和图形。浏览我们的图库，快速找到心仪图像，商业使用完全免费。",
+                "url": "https://cn.365psd.com/"
+            },
+            {
+                "name": "UIgradients",
+                "description": "简洁舒服的渐变配色",
+                "url": "https://uigradients.com/"
+            },
+            {
+                "name": "Freebiesbug",
+                "description": "高质量设计网站、资源聚合站点",
+                "url": "https://freebiesbug.com/"
+            },
+            {
+                "name": "OnePageLove",
+                "description": "网站和APP单页界面欣赏",
+                "url": "https://onepagelove.com/"
+            },
+            {
+                "name": "UpLabs",
+                "description": "采集前端作品设计、iOS UI设计",
+                "url": "https://www.uplabs.com/"
+            },
+            {
+                "name": "Reeoo",
+                "description": "全球最火热的酷站画廊",
+                "url": "http://reeoo.com/"
+            },
+            {
+                "name": "SiteSee",
+                "description": "收录漂亮的界面设计网站",
+                "url": "https://sitesee.co/"
+            },
+            {
+                "name": "Calltoidea",
+                "description": "收集优秀UI组件元素设计的站点",
+                "url": "https://www.calltoidea.com/"
+            },
+            {
+                "name": "Simple Desktops",
+                "description": "一个极简风格壁纸网站",
+                "url": "http://simpledesktops.com/"
+            },
+            {
+                "name": "Wallroom",
+                "description": "精美壁纸网站,壁纸分为了1K、2K、4K、5K、8K",
+                "url": "https://wallroom.io/"
+            }
+        ]
+    },
+    {
+        "category": "插画",
+        "icon": "",
+        "site": [
+            {
+                "name": "unDraw",
+                "description": "免费，矢量插画，可在线调节颜色",
+                "url": "https://undraw.co/illustrations",
+                "image": "undraw.jpg",
+                "id": "Wjca8S341ALpvahLg6Rez"
+            },
+            {
+                "name": "Blush",
+                "description": "色彩鲜明的插画，还可以在figma和sketch中安装插件",
+                "url": "https://blush.design/zh-CN",
+                "image": "blush.jpg",
+                "id": "A1X-kCjdlmDahViQf5_nk"
+            },
+            {
+                "name": "Illustrationx",
+                "description": "国外的插画平台，世界各地插画师的作品",
+                "url": "https://www.illustrationx.com",
+                "image": "illustrationx.jpg",
+                "id": "Fwf9V9KUe7JXuHTCvDCl5"
+            },
+            {
+                "name": "Folio",
+                "description": "一家插画机构，包含从崭露头角的艺术家到行业偶像的作品",
+                "url": "https://folioart.co.uk",
+                "image": "folioart.jpg",
+                "id": "OnY8-s2G2HhIO8G-fhshn"
+            },
+            {
+                "name": "涂鸦王国",
+                "description": "国内插画平台",
+                "url": "https://www.gracg.com",
+                "image": "gracg.jpg",
+                "id": "MzmkUUpA-BJTj718erAml"
+            },
+            {
+                "name": "404 Illustrations",
+                "description": "有趣的404插画",
+                "url": "https://www.kapwing.com/404-illustrations",
+                "image": "404-illustrations.jpg",
+                "id": "xo3Uhs0-ZWf1rP89VWd2K"
+            }
+        ]
+    },
+    {
+        "category": "工具",
+        "icon": "",
+        "site": [
+            {
+                "name": "SM.MS",
+                "description": "图床网站,无外链限制，无流量限制",
+                "url": "https://sm.ms/"
+            },
+            {
+                "name": "Cutterman",
+                "description": "最好用的切图工具,它是免费的,就是这么任性! 此站很多神器。",
+                "url": "http://www.cutterman.cn/zh/cutterman"
+            },
+            {
+                "name": "FontConverter",
+                "description": "将字体转成网页webfont专用字体",
+                "url": "http://www.freefontconverter.com/#&linkId=404"
+            },
+            {
+                "name": "font-face generator",
+                "description": "@font-face网页字体文件格式转换",
+                "url": "https://everythingfonts.com/font-face"
+            },
+            {
+                "name": "TinyPNG",
+                "description": "超完美PNG压缩工具",
+                "url": "https://tinypng.com/"
+            },
+            {
+                "name": "BrowserFrame",
+                "description": "一个生成浏览器外壳的网站，它提供了两种方式来生成截图",
+                "url": "https://browserframe.com/"
+            },
+            {
+                "name": "Screen Guru",
+                "description": "实现通过网址生成截图功能",
+                "url": "https://screen.guru"
+            },
+            {
+                "name": "Carbon",
+                "description": "代码界美图秀秀,装逼用",
+                "url": "https://carbon.now.sh"
+            },
+            {
+                "name": "easy PDF",
+                "description": "在线 PDF 转换工具",
+                "url": "https://easypdf.com/cn"
+            },
+            {
+                "name": "有道云笔记",
+                "description": "个人觉得比印象笔记好用的云笔记",
+                "url": "https://note.youdao.com/web"
+            },
+            {
+                "name": "SVG To PNG",
+                "description": "免费在线SVG转PNG网站",
+                "url": "https://svgtopng.com/zh/"
+            },
+            {
+                "name": "虫部落快搜",
+                "description": "快搜！虫部落全网独家首发出品！为你聚合Google,百度,必应等国内外综合搜索和学术,资源,专业领域知识等垂直搜索。精准搜索,便捷交互！是你的网络搜索第一站！",
+                "url": "https://search.chongbuluo.com/"
+            },
+            {
+                "name": "Photopea",
+                "description": "免安装的网页版“ps完美替代者”——Photopea，走红国外！",
+                "url": "https://www.photopea.com/"
+            },
+            {
+                "name": "万能命令",
+                "description": "wn万能命令是一个在线工具效率平台，将各种高质量的在线工具按应用站点聚合起来，让你以方便快捷好记的方式寻找和使用各类在线工具。",
+                "url": "https://wn.run/cn/"
+            },
+            {
+                "name": "临时邮箱",
+                "description": "填写邮箱时候，不想使用您的真实邮箱？那就使用24mail.chacuo.net 临时邮箱。不需要注册，邮箱持续24小时，比十分钟邮箱（10分钟)保持时间更长，可以任意设置邮箱名，随时更换邮箱。",
+                "url": "http://24mail.chacuo.net/"
+            },
+            {
+                "name": "临时短信",
+                "description": "在线接收短信，接收短信验证码，显示迅速，与国外类似短信验证码接收更快捷。",
+                "url": "https://www.pdflibr.com/"
+            },
+            {
+                "name": "Firefox Send",
+                "description": "使用 Firefox Send 端到端加密分享文件，链接到期即焚。分享更私密，文件到期真正无痕迹。",
+                "url": "https://send.firefox.com/"
+            }
+        ]
+    }
+]

@@ -74,7 +74,8 @@
           >
             <a :href="mark.url" target="_blank" class="mark-wrapper">
               <div class="mark-logo">
-                <img :src="'/static/img/' + mark.image" alt="" />
+                <!-- <img :src="'/static/img/' + mark.image" alt="" /> -->
+                <img :src="mark.url | webDomain" alt="" />
               </div>
               <div>
                 <a :href="mark.url" target="_blank" class="mark-name">{{
@@ -144,7 +145,7 @@
 </template>
 
 <script>
-import resourceJson from "@/server/resource.json";
+import resourceJson from "@/server/data.json";
 import toolBar from "./components/tool-bar.vue";
 import siderBar from "./components/side-bar.vue";
 import Header from "./components/header.vue";
