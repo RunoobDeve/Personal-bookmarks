@@ -34,7 +34,7 @@ export default {
   }
   .web-introduce {
     background-image: linear-gradient(135deg, #fff6b7, #f6416c);
-    width: 1200px;
+    width: 70%;
     position: absolute;
     top: 50%;
     left: 50%;
@@ -45,7 +45,8 @@ export default {
       background: linear-gradient(135deg, #f7941e, #72c6ef, #00a651);
       background-clip: text;
       color: transparent;
-      background-size: 15%;
+      background-size: 100%;
+      display: inline-block;
     }
     .introduce-desc {
       font-size: 18px;

@@ -46,10 +46,14 @@
                 <!-- <img :src="'/static/img/' + item.image" alt="" /> -->
                 <img :src="item.url | webDomain" alt="" />
               </div>
-              <div>
-                <a :href="item.url" target="_blank" class="mark-name">{{
-                  item.name
-                }}</a>
+              <div class="mark-info">
+                <a
+                  :href="item.url"
+                  target="_blank"
+                  :title="item.name"
+                  class="mark-name"
+                  >{{ item.name }}</a
+                >
                 <div class="mark-desc">{{ item.description }}</div>
               </div>
               <div @click.prevent="delCollect(index)" class="mark-check">
@@ -74,14 +78,20 @@
           >
             <a :href="mark.url" target="_blank" class="mark-wrapper">
               <div class="mark-logo">
-                <!-- <img :src="'/static/img/' + mark.image" alt="" /> -->
-                <img :src="mark.url | webDomain" alt="" />
+                <!-- <img :src="mark.url | webDomain" alt="" /> -->
+                <img v-imgLazy="mark.url" alt="" />
               </div>
-              <div>
-                <a :href="mark.url" target="_blank" class="mark-name">{{
-                  mark.name
-                }}</a>
-                <div class="mark-desc">{{ mark.description }}</div>
+              <div class="mark-info">
+                <a
+                  :href="mark.url"
+                  target="_blank"
+                  :title="mark.name"
+                  class="mark-name"
+                  >{{ mark.name }}</a
+                >
+                <div class="mark-desc" :title="mark.description">
+                  {{ mark.description }}
+                </div>
               </div>
               <div
                 v-if="collectIds.indexOf(mark.id) == -1"
@@ -150,13 +160,13 @@ import toolBar from "./components/tool-bar.vue";
 import siderBar from "./components/side-bar.vue";
 import Header from "./components/header.vue";
 import resize from "@/mixin/resize";
-// import {htmlparser2} from 'htmlparser2';
-const htmlparser2 = require('htmlparser2')
+// const htmlparser2 = require('htmlparser2')
 import { nanoid } from "nanoid";
 import { mapGetters } from "vuex";
 export default {
   data() {
     return {
+      imgLazy: "https://api.iowen.cn/favicon/www.iconfont.cn.png",
       resource: resourceJson,
       myCollect: [],
       addFlag: false,
@@ -276,14 +286,23 @@ export default {
       reader.readAsText(file);
       reader.onloadend = () => {
         if (file.type == "text/html") {
-          console.log(typeof(reader.result));
-          console.log(htmlparser2)
-          let document = htmlparser2.parseDocument(reader.result)
-          console.log(document)
+          let htmlString = reader.result;
+          let dom = document.createElement("div");
+          dom.innerHTML = htmlString;
+          let linkArr = dom.getElementsByTagName("a");
+          let markArr = []
+          for (var i = 0; i < linkArr.length; i++) {
+            let obj = {};
+            obj.url = linkArr[i].href;
+            obj.id = linkArr[i].getAttribute('add_date');
+            obj.name = linkArr[i].innerHTML;
+            markArr.push(obj)
+          }
+          this.myCollect = [...this.myCollect,...markArr]
         } else {
-          // const myCollect = JSON.parse(reader.result);
-          // this.myCollect = [...this.myCollect, ...myCollect];
-          // localStorage.setItem("myCollect", JSON.stringify(this.myCollect));
+          const myCollect = JSON.parse(reader.result);
+          this.myCollect = [...this.myCollect, ...myCollect];
+          localStorage.setItem("myCollect", JSON.stringify(this.myCollect));
         }
         return false;
         // const myCollect = JSON.parse(reader.result);
@@ -390,9 +409,19 @@ export default {
             width: 100%;
           }
         }
+
+        .mark-info {
+          overflow: hidden;
+        }
+
         .mark-name {
           font-weight: bold;
           color: var(--theme-primary-color);
+          white-space: nowrap;
+          text-overflow: ellipsis;
+          overflow: hidden;
+          display: block;
+          padding-right: 10px;
         }
         .mark-desc {
           color: #a0aec0;
